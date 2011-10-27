@@ -1,0 +1,430 @@
+.toc, .open-index #pages .indicator {
+  /* blauw */
+
+  /* rood */
+
+  /* groen */
+
+  /* paars */
+
+  /* lichtpaars */
+
+}
+.toc .color-1 a, .open-index #pages .indicator .color-1 a {
+  background-color: #d9ebf7;
+}
+.toc .color-2 a, .open-index #pages .indicator .color-2 a {
+  background-color: #f9dfdd;
+}
+.toc .color-3 a, .open-index #pages .indicator .color-3 a {
+  background-color: #e1eddb;
+}
+.toc .color-4 a, .open-index #pages .indicator .color-4 a {
+  background-color: #e3dce7;
+}
+.toc .color-5 a, .open-index #pages .indicator .color-5 a {
+  background-color: #f7d9e7;
+}
+article.article-0 {
+  background-color: #007bc7;
+}
+article.article-0 > div:first-child {
+  color: #fff;
+}
+article.article-0 > div:first-child dl dd + dt {
+  border-color: #fff;
+}
+article.article-0 > div:first-child dl > * {
+  color: #fff;
+}
+article.article-0 > div:first-child nav h2 {
+  color: #f9e11e;
+}
+article.article-0 > div:first-child nav p {
+  color: #fff;
+}
+article blockquote {
+  margin: 1em 0;
+}
+article {
+  color: #4d4d4d;
+}
+article header {
+  position: relative;
+  margin-bottom: 1em;
+}
+article header > * {
+  position: relative;
+  z-index: 2;
+}
+article header img {
+  vertical-align: bottom;
+}
+article header h1 {
+  font-size: 3em;
+}
+article header h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+article section {
+  position: relative;
+}
+article section h1 {
+  line-height: 1;
+  margin-bottom: 0.75em;
+  font-size: 3em;
+}
+article section h1.full {
+  margin: 0;
+  width: auto;
+}
+article section blockquote {
+  float: left;
+  margin: 24px;
+  padding: 24px;
+  text-align: right;
+}
+article section blockquote.right {
+  float: right;
+  text-align: left;
+}
+article section blockquote.full {
+  float: none;
+  width: auto;
+  text-align: left;
+}
+article section aside {
+  float: left;
+  clear: left;
+}
+article section aside.left {
+  float: left;
+}
+article section section + aside, article section aside.left + aside {
+  float: right;
+  clear: right;
+}
+article section aside + section {
+  margin-left: 24px;
+}
+article figure, article .image-slider {
+  float: left;
+  margin-left: 240px;
+  clear: both;
+  width: 456px;
+  margin-bottom: 1.5em;
+}
+article figure.full, article .image-slider.full {
+  float: none;
+  width: auto;
+  margin-left: 0;
+}
+article figure.left,
+article .image-slider.left,
+article figure.right,
+article .image-slider.right {
+  width: 696px;
+  margin-left: 240px;
+}
+article figure.left, article .image-slider.left {
+  margin-left: 0;
+}
+article figure figcaption, article .image-slider figcaption {
+  margin-top: 0.75em;
+  color: #666;
+  width: 456px;
+}
+article .image-slider figure ol {
+  list-style: none;
+}
+article .image-slider figure ol li {
+  float: left;
+  padding-right: 24px;
+}
+article .image-slider figure ol li img {
+  float: left;
+  max-width: 536px;
+}
+article section section figure {
+  margin: 0 0 1.5em 0;
+}
+article section section figure.left {
+  float: left;
+  width: 456px;
+  margin: 0 24px 1.5em -240px;
+}
+article section section figure.right {
+  width: 456px;
+  margin: 0 -240px 1.5em 24px;
+  float: right;
+}
+article.layout-1 header img + h1 {
+  display: inline-block;
+  width: 456px;
+}
+article.layout-1 header.full {
+  padding: 6em 240px 8em 240px;
+}
+article.layout-1 header.full h1 {
+  display: block;
+  width: auto;
+}
+article.layout-1 header.full h1 + h2 {
+  margin-top: 2em;
+}
+article.layout-1 header.full .full {
+  margin-left: -240px;
+  margin-right: -240px;
+}
+article.layout-1 header.image {
+  overflow: hidden;
+  margin-left: -44px;
+  margin-right: -44px;
+  padding-left: 284px;
+  padding-right: 284px;
+}
+article.layout-1 header.image > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+article.layout-1 header.image:first-child {
+  margin-top: -44px;
+}
+article.layout-1 section h1 {
+  margin-left: 240px;
+  width: 456px;
+}
+article.layout-1 section section {
+  float: left;
+  width: 456px;
+  margin-left: 240px;
+}
+article.layout-1 section blockquote {
+  width: 296px;
+  border-top: 5px solid transparent;
+  margin: 8px 24px 0 -240px;
+  padding: .375em 0 0.375em 80px;
+}
+article.layout-1 section blockquote.right {
+  margin: 8px -240px 0 24px;
+  padding: .375em 80px 0.375em 0;
+}
+article.layout-1 section blockquote.full {
+  margin-right: -240px;
+  padding: .375em 0 1.5em 0;
+  width: auto;
+}
+article.layout-1 section aside {
+  width: 216px;
+}
+article.layout-1 section aside.left {
+  margin-left: -696px;
+}
+article.layout-1 section aside + section {
+  margin-left: 24px;
+}
+article.layout-1 section section figure {
+  margin: 0 0 1.5em 0;
+}
+article.layout-1 section section figure.left {
+  float: left;
+  width: 456px;
+  margin: 0 24px 1.5em -240px;
+}
+article.layout-1 section section figure.right {
+  width: 456px;
+  margin: 0 -240px 1.5em 24px;
+  float: right;
+}
+article.layout-2 > div {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+article.layout-2 > div > header {
+  margin-bottom: 0;
+  padding-bottom: 1em;
+}
+article.layout-2 > div > section > section, article.layout-2 > div > header, article.layout-2 > div > footer {
+  border-left: 320px solid transparent;
+  padding-left: 24px;
+  min-height: 0;
+  zoom: 1;
+}
+article.layout-2 > div > section > section:before,
+article.layout-2 > div > header:before,
+article.layout-2 > div > footer:before,
+article.layout-2 > div > section > section:after,
+article.layout-2 > div > header:after,
+article.layout-2 > div > footer:after {
+  display: table;
+  content: "";
+}
+article.layout-2 > div > section > section:after, article.layout-2 > div > header:after, article.layout-2 > div > footer:after {
+  clear: both;
+}
+article.layout-2 > div > section aside {
+  margin-left: 104px;
+  width: 216px;
+  position: relative;
+  z-index: 2;
+}
+article.layout-2 > div > section section + aside {
+  margin-left: 24px;
+}
+article.layout-2 > div > section aside + section {
+  margin-left: 0;
+}
+article.color-1 {
+  background-color: #d9ebf7;
+}
+article.color-2 {
+  background-color: #f9dfdd;
+}
+article.color-3 {
+  background-color: #e1eddb;
+}
+article.color-4 {
+  background-color: #e3dce7;
+}
+article.color-5 {
+  background-color: #f7d9e7;
+}
+article.color-1 h1, article.color-1 h2, article.color-1 h3 {
+  color: #007bc7;
+}
+article.color-1 a, article.color-1 blockquote, article.color-1 p.intro {
+  color: #ca005d;
+}
+article.color-1 section blockquote {
+  border-color: #ca005d;
+}
+article.color-1.layout-2 > div > section > section, article.color-1.layout-2 > div > header, article.color-1.layout-2 > div > footer {
+  border-color: #ca005d;
+}
+article.color-2 h1, article.color-2 h2, article.color-2 h3 {
+  color: #d52b1e;
+}
+article.color-2 a, article.color-2 blockquote, article.color-2 p.intro {
+  color: #42145f;
+}
+article.color-2 section blockquote {
+  border-color: #42145f;
+}
+article.color-2.layout-2 > div > section > section, article.color-2.layout-2 > div > header, article.color-2.layout-2 > div > footer {
+  border-color: #42145f;
+}
+article.color-3 h1, article.color-3 h2, article.color-3 h3 {
+  color: #39870c;
+}
+article.color-3 a, article.color-3 blockquote, article.color-3 p.intro {
+  color: #007bc7;
+}
+article.color-3 section blockquote {
+  border-color: #007bc7;
+}
+article.color-3.layout-2 > div > section > section, article.color-3.layout-2 > div > header, article.color-3.layout-2 > div > footer {
+  border-color: #007bc7;
+}
+article.color-4 h1, article.color-4 h2, article.color-4 h3 {
+  color: #42145f;
+}
+article.color-4 a, article.color-4 blockquote, article.color-4 p.intro {
+  color: #db2b1e;
+}
+article.color-4 section blockquote {
+  border-color: #db2b1e;
+}
+article.color-4.layout-2 > div > section > section, article.color-4.layout-2 > div > header, article.color-4.layout-2 > div > footer {
+  border-color: #db2b1e;
+}
+article.color-5 h1, article.color-5 h2, article.color-5 h3 {
+  color: #ca005d;
+}
+article.color-5 a, article.color-5 blockquote, article.color-5 p.intro {
+  color: #007bc7;
+}
+article.color-5 section blockquote {
+  border-color: #007bc7;
+}
+article.color-5.layout-2 > div > section > section, article.color-5.layout-2 > div > header, article.color-5.layout-2 > div > footer {
+  border-color: #007bc7;
+}
+@media only screen and (max-width: 1004px) {
+  #document article.layout-1 header {
+    max-width: 616px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+  #document article.layout-1 header.full .full {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  #document article.layout-1 header.image {
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 24px 80px;
+    max-width: none;
+  }
+  #document article.layout-1 header.image > h1, #document article.layout-1 header.image > h2 {
+    max-width: 616px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+  #document article.layout-1 h1 {
+    width: auto;
+  }
+  #document article.layout-1 section {
+    max-width: 616px;
+    width: auto;
+    margin: 0 auto;
+  }
+  #document article.layout-1 section h1 {
+    margin-left: 0;
+  }
+  #document article.layout-1 section section {
+    width: none;
+    float: none;
+  }
+  #document article.layout-1 section aside, #document article.layout-1 section aside + section {
+    float: left;
+    width: auto;
+    margin: 0;
+  }
+  #document article.layout-1 section aside.left {
+    margin: 0;
+  }
+  #document article.layout-1 section blockquote {
+    float: none;
+    width: auto;
+    padding: 0;
+    margin: 0 0 1.5em 0;
+  }
+  #document article.layout-1 figure {
+    max-width: 616px;
+    width: auto;
+    float: none;
+    margin: 0 auto 1.5em auto;
+  }
+  #document article.layout-2 > div {
+    padding: 24px;
+  }
+  #document article.layout-2 > div > section > section, #document article.layout-2 > div > header, #document article.layout-2 > div > footer {
+    border: none;
+    padding-left: 0;
+  }
+  #document article.layout-2 > div > section aside {
+    margin-left: 0;
+    width: auto;
+  }
+  #document article.layout-2 > div > section section + aside {
+    margin-left: 0;
+  }
+}
+/* END @media */

@@ -1,0 +1,524 @@
+/*	==========================================================================================
+ *	desktop
+ *	==========================================================================================
+ *	Style sheet is aimed at displays over 640 pixels in width. The iPad
+ *	and most desktop computers will fall into this category.
+ *	==========================================================================================
+ *	Author:		Jonathan van Wunnik
+ *	Project:	Project Name
+ *	Link:		http://www.website.com
+ *	======================================================================================= */
+
+
+	// Core variables and mixins
+@import url("variables.less");	// Modify this for custom colors, font-sizes, etc.
+@import url("mixins.less");
+
+
+
+/*	==========================================================================================
+	Normalize (Desktop IE)
+	======================================================================================= */
+
+.ie {
+	img, embed, object, video { width: 100%; } // Max-width (and min-width) not supported in IE7/8
+	legend { border: 0; } // Corrects color not being inherited in IE7/8/9
+}
+
+.ie7 {
+	body { margin: 0; } // Addresses margins handled incorrectly in IE7
+	audio, canvas, video { display: inline; zoom: 1; } // HTML5 element display
+	nav ul { list-style-image: none; } // prevent IE7 from rendering list bg images for nav uls
+	img { -ms-interpolation-mode: bicubic; } // Improve image quality when scaled in IE7 (http://code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/)
+	form { margin: 0; } // Corrects margin displayed oddly in IE7
+	legend { margin-left: -7px; } // Corrects alignment displayed oddly in IE7
+	button, input[type="button"], input[type="submit"], input[type="reset"] { overflow: visible; /* width: auto; */ } // Correct inner spacing displayed oddly in IE7
+	button, input, select, textarea { vertical-align: middle; } // Define consistent vertical alignment display in all browsers
+	table { border-collapse: collapse; } // Collapse table to remove spacing in IE7
+	table button, table input { overflow: auto; } // Reintroduce inner spacing in 'table' to avoid overlap and whitespace issues in IE7
+}
+
+
+/*	==========================================================================================
+	Typography
+	======================================================================================= */
+
+
+
+/*	==========================================================================================
+	Links
+	======================================================================================= */
+
+
+
+/*	==========================================================================================
+	Layout/Grid
+	======================================================================================= */
+
+	// Grid Variables
+	@columns: 12;		// Number of columns
+	@column-width: 60;	// Column width
+	@gutter-width: 24;	// Gutter width
+	@total-width: 100%;	// For a pixel-based layout out-comment @total-width
+
+	/* Document */
+[role="document"] {
+	.center-block();
+	
+}
+
+	.ie7, .ie8 { [role="document"] { width: 984px; } } // Min- and max-width does not work in IE7/8
+	.ie7 [role="document"] { text-align: center; } // Make sure the layout is centered in IE7
+	.ie7 { [role="document"], header, section, article, footer { text-align: left; } }
+
+	/* Grid */
+
+
+
+	/* Layout */
+	#document {
+		.center-block(44px, 44px);
+		.box-shadow(0,0);
+		
+	}
+		
+	.article-0 {
+		 
+		> div:first-child {
+			background-color: transparent;
+	
+			padding: 0;
+			
+			> div {
+				width: 50%;
+				float: right;
+				margin: 24px 0;
+				> * {
+					margin-left: 32px;
+					margin-right: 24px;
+					
+				}
+			}
+			p.image {
+			background-color: #ff3300;
+				float: left;
+				width: 50%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				overflow: hidden;
+				
+				img {
+					position: absolute;
+					left: 0;
+					top: 0;
+					height: 100%;
+					max-width: none;
+					
+				}
+			}
+			
+			
+		}
+	}
+	
+	section.toc {
+	
+		ol {
+			margin: 0 -24px -24px 0;
+			li {
+				float: left;
+				width: 25%;
+				margin-bottom: 24px;
+				a {
+					min-height: 190px;
+					margin-right: 24px;
+					padding: 12px;	
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+	.prev-next {
+		
+		width: 50px;
+		margin-left: -25px;
+		ol {
+			.prev, .next {
+				display: block;
+			}
+		}
+		ul li{
+			text-indent: 0;
+			
+		}
+		
+	}
+	.init {
+		#document {
+			visibility: hidden;
+		}
+	}
+	
+		
+	
+
+/*	==========================================================================================
+	Layout adjustments for 768px width
+	======================================================================================= */
+@media only screen and (max-width: 768px) {
+
+		/* Document */
+	[role="document"] {
+		max-width: 720px;
+	}
+	
+
+}	/* END @media */
+
+
+/*	==========================================================================================
+	Layout adjustments for 768px to 1004px width
+	======================================================================================= */
+@media only screen and (min-width: 768px) and (max-width: 1004px) {
+
+		/* Document */
+	[role="document"] {
+		max-width: 768px;
+	}
+
+}	/* END @media */
+
+
+/*	==========================================================================================
+	Layout adjustments for minimal width of 1004px
+	======================================================================================= */
+@media only screen and (min-width: 1004px) {
+
+		/* Document */
+	[role="document"] {
+		max-width: 984px;
+	}
+	#document {
+		max-width: 984px;
+		> header nav {
+			left: -15px;
+			right: -15px;
+		}
+	}	
+	
+
+}	/* END @media */
+
+
+/*	==========================================================================================
+	Style adjustments for tablet (iPad)) in landscape + portrait view mode
+	======================================================================================= */
+ @media only screen and (device-width: 768px) { 
+
+	html {
+		background: url(img/ipad-bg.jpg);
+	}
+
+		/* Document */
+	[role="document"] {
+
+	}
+	
+	
+	#document {
+		max-width: 100%;
+		margin: 0;	
+		> header {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			nav {
+				.transition(all, 0.3s);
+				
+				background-color: #123552;
+				//.opacity(0);
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 4;
+				> ul {
+					> li {
+						&.home { a { background-position: 15px -85px;} }
+						&.toc { a { background-position: -30px -85px; width: 34px;} }
+						&.export { a { background-position: -100px -85px;} }
+						&.settings { a { background-position: -144px -85px;} }
+					}
+				}
+			}
+		}
+		
+		
+	}
+	.home #document {
+			header {
+				nav {
+					top: 0;
+					background-color: transparent;
+					.opacity(100);
+				}
+			}
+		}
+	
+	nav.prev-next { display: none; }
+	
+	
+	.has-menu {
+		#document header nav { top: 0; .opacity(100); }
+	}
+	
+	
+	#pages {
+		.transition(height, 0.2s);
+		position: absolute;
+		display: none;
+		z-index: 4;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		min-height: 32px;
+		margin: 0;
+		background-color: #123552;
+		.box-shadow(0,0,3px);
+		width: 100%;
+		overflow: auto;	
+		ol.indicator {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			list-style: none;			
+			margin: 0;
+			padding: 0;
+			
+			li {
+					
+				float: left;
+					
+				a {
+					height: 11px;
+					text-indent: -1234em;
+					display: block;
+					
+					.transition(all, 0.3s);
+					margin: 10px 5px 11px 0;
+					background: #415d75 url(img/nav.png) 50% -130px;
+					> * {
+						display: none;
+						
+					}
+				}
+				&:first-child  {
+					a {
+						margin-left: 5px;
+					}
+				}
+				&.current a {
+					background-color: #fff;
+				}
+			}
+		}
+	}	
+	.open-index #pages {
+			height: 120px;
+			ol.indicator {
+				li {
+					width: 210px !important;
+					a {
+						margin-right: 10px;
+						height: 99px;
+						position: relative;
+						text-indent: -1234em;
+						em {
+							position: absolute;
+							color: #154273;
+							left: 10px;
+							top: 10px;
+							bottom: 10px;
+							right: 10px;
+							text-indent: 0;
+							font-style: normal;
+							display: inline;
+							z-index: 4;
+						}
+					}
+				&:first-child  {
+					a {
+						margin-left: 10px;
+					}
+				}
+				&.home, &.toc {
+					a {
+						background-color: #fff;
+						 
+						
+						
+					}
+				}
+				&.current a {
+					background-color: #fff;
+					background-position: 50% 100%;
+				}
+			}
+		}
+	}
+	
+		
+	
+	
+	
+	
+	
+	
+
+}	/* END @media */
+
+
+/*	==========================================================================================
+	Style adjustments for tablet (iPad) in landscape view mode
+	======================================================================================= */
+@media only screen and (device-width: 768px) and (orientation: landscape) {
+
+		/* Document */
+	
+	#document {
+		.box-shadow(0,0,0);
+		article {
+			background-position: 44px 0;
+
+		}
+		article > div {
+			padding: 44px;
+			min-height: 690px;
+		}
+	}
+	
+	
+	
+
+}	/* END @media */
+
+
+/*	==========================================================================================
+	Style adjustments for tablet (iPad) in portrait view mode (768px)
+	======================================================================================= */
+@media only screen and (device-width: 768px) and (orientation: portrait) {
+
+	#document {
+		article > div {
+			min-height: 946px;
+		}
+	}
+
+}	/* END @media */
+
+
+/*	==========================================================================================
+	Fallback styles for unavilable CSS3 features (with Modernizr: http://www.modernizr.com/)
+	======================================================================================= */
+
+	/* NO box shadow */
+.no-boxshadow {
+
+}
+
+	/* NO border radius */
+.no-borderradius {
+
+}
+
+	/* NO rgba */
+.no-rgba {
+
+}
+
+	/* NO csstransitions */
+.no-csstransitions {
+
+}
+
+
+/*	==========================================================================================
+	Non-semantic helper classes
+	======================================================================================= */
+
+	/* Hide for both screenreaders and browsers (http://css-discuss.incutio.com/wiki/Screenreader_Visibility) */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+	/* Hide only visually, but have it available for screenreaders (http://www.webaim.org/techniques/css/invisiblecontent/ & http://j.mp/visuallyhidden) */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+	/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+	/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden }
+
+	/* For image replacement */
+.ir {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: 0;
+	direction: ltr;
+	display: block;
+	overflow: hidden;
+	text-indent: -999em;
+	text-align: left;
+}
+
+.ir br { display: none; }
+
+	/* Clearfix for containing floats — Firefox 3.5+, Safari 4+, Chrome, Opera 9+, IE 6+ (http://nicolasgallagher.com/micro-clearfix-hack/) */
+.clearfix,
+header, article > section, article,
+nav ul, nav p,
+[role="document"],
+[role="document"] > footer {
+	zoom: 1;
+	&:before, &:after {
+    	display: table;
+    	content: "";
+	}
+	&:after {
+    	clear: both;
+	}
+}
+
+
+/*	==========================================================================================
+	Print styles
+	======================================================================================= */
+
+@import url("print.less");

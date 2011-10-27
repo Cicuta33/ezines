@@ -1,0 +1,21 @@
+# www.robotstxt.org/
+# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
+
+User-agent: *
+#Disallow:
+
+# Google Image
+User-agent: Googlebot-Image
+Disallow:
+Allow: /*
+
+# Google AdSense
+User-agent: Mediapartners-Google*
+Disallow:
+Allow: /*
+
+# digg mirror
+User-agent: duggmirror
+Disallow: /
+
+Sitemap: http://www.example.com/sitemap.xml

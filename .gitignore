@@ -1,0 +1,82 @@
+# ----------------------------------------------------------------------
+# Numerous always-ignore extensions
+# ----------------------------------------------------------------------
+
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+
+
+# ----------------------------------------------------------------------
+# OS or Editor folders
+# ----------------------------------------------------------------------
+
+.DS_Store
+.cache
+.project
+.settings
+.com.apple*
+.buildpath
+.project
+nbproject
+thumbs.db
+
+
+# ----------------------------------------------------------------------
+# Folders to ignore
+# ----------------------------------------------------------------------
+
+.hg
+.svn
+publish
+.idea
+
+
+# ----------------------------------------------------------------------
+# Files to ignore
+# ----------------------------------------------------------------------
+
+#*~
+#*.swp
+
+
+# ----------------------------------------------------------------------
+# Ignore all directories and/or files in a directory
+# ----------------------------------------------------------------------
+
+#tmp/**/*
+
+
+# ----------------------------------------------------------------------
+# Ignore ExpressionEngine directories and/or files
+# ----------------------------------------------------------------------
+
+#**/**
+
+#/index.php
+
+#!/assets
+#!/assets/**
+#/assets/.DS_Store
+#/assets/**/.DS_Store
+
+#/assets/cache
+
+#!/mysql/*.sql
+#!/design/*.psd
+
+#!/system
+#/system/**
+#!/system/expressionengine
+#/system/expressionengine/**
+#!/system/expressionengine/third_party
+
+#!/themes
+#/themes/**
+#!/themes/third_party

@@ -1,0 +1,287 @@
+<!doctype html>
+<!--[if lt IE 7]>		<html class="no-js ie ie6" lang="en">	<![endif]-->
+<!--[if IE 7]>			<html class="no-js ie ie7" lang="en">	<![endif]-->
+<!--[if IE 8]>			<html class="no-js ie ie8" lang="en">	<![endif]-->
+<!--[if gt IE 8]><!-->	<html class="no-js" lang="en">			<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+	<title>Default CSS</title>
+	<meta name="author" content="Name"/>
+	<meta name="robots" content="index, follow"/>
+	<meta name="keywords" content="Name"/>
+	<meta name="description" content="Description"/>
+
+	<link rel="home" href="http://www.domainname.com/"/>
+	<link rel="index" href="http://www.domainname.com/sitemap/"/>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/atom-feed-name"/>
+
+	<!-- Mobile viewport optimized -->
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+
+	<!-- Web app will display in full screen mode when launched from the Web Clip icon -->
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/> <!-- options: 1) default, 2) black or 3) black-translucent -->
+
+	<!-- Full screen startup Web app image (iphone: 320x460px, iphone4: 640x920px and in portrait orientation) -->
+	<link rel="apple-touch-startup-image" media="screen and (resolution: 163dpi)" href="images/startup/my-custom-startup-image-iphone.png">
+	<link rel="apple-touch-startup-image" media="screen and (resolution: 326dpi)" href="images/startup/my-custom-startup-image-iphone4.png">
+
+	<!-- Universal CSS for IE6 (http://code.google.com/p/universal-ie6-css/) -->
+	<!--[if ! lte IE 6]><!-->
+	    <link rel="stylesheet" href="stylesheets/css/base.css" media="screen, handheld"/>
+	    <link rel="stylesheet" href="stylesheets/css/mobile.css" media="only screen and (min-width: 320px) and (max-width: 720px)"/>
+	    <link rel="stylesheet" href="stylesheets/css/desktop.css" media="only screen and (min-width: 720px)"/>
+	    <!--[if (lt IE 9)&(!IEMobile)]><link rel="stylesheet" href="stylesheets/css/desktop.css" media="all"/><![endif]-->
+	<!--<![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" href="stylesheets/ie6/ie6.1.1.css" media="screen"/><![endif]-->
+
+	<!-- All Javascript at the bottom, except for Modernizr (enables HTML5 elements and feature detects) (http://www.modernizr.com) plus Selectivzr (enables CSS3 selectors for IE) (http://selectivizr.com) -->
+	<script src="javascript/libs/modernizr-2.0.6.min.js"></script>
+	<!--[if (gte IE 6)&(lte IE 8)]>
+		<script src="javascript/libs/nwmatcher-1.2.4.min.js"></script>
+		<script src="javascript/libs/selectivizr-1.0.2.min.js"></script>
+		<noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+	<![endif]-->
+
+	<!-- Google Webfont Loader (see also dealing wiht FOUT: http://www.html5rocks.com/tutorials/webfonts/quick/#toc-fout) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.0.19/webfont.js"></script>
+	<script>WebFont.load({custom:{families:["MavenProRegular"],urls:["type/maven-pro-regular.css"]}});</script>
+
+	<!-- Typekit -->
+	<!-- <script src="http://use.typekit.com/xxxxxxx.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script> -->
+</head>
+<body>
+
+	<div id="document" role="document">
+
+		<header role="banner">
+
+			<h1>Website title</h1>
+
+			<nav role="navigation">
+				<ul>
+					<li><a href="index.html">Index</a></li>
+					<li><a href="typography.html">Typography</a></li>
+					<li><a href="lorumipsum.html">Lorum Ipsum</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="main" role="main">
+
+			<h1>Level 01 Heading h1</h1>
+			<h2>Level 02 Heading h2</h2>
+			<h3>Level 03 Heading h3</h3>
+			<h4>Level 04 Heading h4</h4>
+			<h5>Level 05 Heading h5</h5>
+			<h6>Level 06 Heading h6</h6>
+
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce sodales ligula sed urna. Aliquam posuere arcu viverra erat. Pellentesque et enim dapibus ante facilisis bibendum. Nam congue dapibus urna. Vestibulum consequat arcu at magna. Nunc faucibus mollis lacus. Nulla tempor luctus tellus. Donec blandit lobortis pede. Vestibulum vel pede ut urna eleifend lacinia.</p>
+
+			<hr/>
+
+			<h1>Level 01 Heading h1</h1>
+			<p>Maecenas ligula nibh, imperdiet at, interdum eget, sagittis eu, enim. Vivamus vel urna. Donec fringilla ullamcorper sem. In risus arcu, pellentesque cursus, faucibus cursus, consequat quis, est. Aliquam id erat. Aliquam arcu. Phasellus vulputate. Integer sem diam, mattis vel, viverra ullamcorper, ultricies quis, nisl. Sed sollicitudin quam ut nisi. Vivamus velit sapien, volutpat eu, faucibus id, nonummy id, urna.</p>
+
+			<h2>Level 02 Heading h2</h2>
+			<p>Praesent iaculis pellentesque est. Nulla facilisi. Etiam fringilla vehicula orci. Aliquam fermentum ipsum id nulla. Aliquam interdum laoreet leo. Cras accumsan. Nam pharetra diam id nunc. Integer blandit tellus vulputate felis. Cras aliquam, eros in euismod aliquam, enim nisl mollis metus, quis fringilla ipsum diam ut pede. Mauris a libero ac velit interdum pulvinar. Nunc ipsum mauris, semper rhoncus, feugiat ut, egestas id, diam. Nullam porttitor condimentum risus. Vivamus nec enim eget nisi commodo euismod. Ut turpis. Nullam malesuada rutrum neque. Nam sodales porta elit. Mauris mollis nisl vel augue.</p>
+
+			<h3>Level 03 Heading h3</h3>
+			<p>Maecenas ligula nibh, imperdiet at, interdum eget, sagittis eu, enim. Vivamus vel urna. Donec fringilla ullamcorper sem. In risus arcu, pellentesque cursus, faucibus cursus, consequat quis, est. Aliquam id erat. Aliquam arcu. Phasellus vulputate. Integer sem diam, mattis vel, viverra ullamcorper, ultricies quis, nisl. Sed sollicitudin quam ut nisi. Vivamus velit sapien, volutpat eu, faucibus id, nonummy id, urna.</p>
+
+			<h4>Level 04 Heading h4</h4>
+			<p>Praesent iaculis pellentesque est. Nulla facilisi. Etiam fringilla vehicula orci. Aliquam fermentum ipsum id nulla. Aliquam interdum laoreet leo. Cras accumsan. Nam pharetra diam id nunc. Integer blandit tellus vulputate felis. Cras aliquam, eros in euismod aliquam, enim nisl mollis metus, quis fringilla ipsum diam ut pede. Mauris a libero ac velit interdum pulvinar. Nunc ipsum mauris, semper rhoncus, feugiat ut, egestas id, diam. Nullam porttitor condimentum risus. Vivamus nec enim eget nisi commodo euismod. Ut turpis. Nullam malesuada rutrum neque. Nam sodales porta elit. Mauris mollis nisl vel augue.</p>
+
+			<h5>Level 05 Heading h5</h5>
+			<p>Maecenas ligula nibh, imperdiet at, interdum eget, sagittis eu, enim. Vivamus vel urna. Donec fringilla ullamcorper sem. In risus arcu, pellentesque cursus, faucibus cursus, consequat quis, est. Aliquam id erat. Aliquam arcu. Phasellus vulputate. Integer sem diam, mattis vel, viverra ullamcorper, ultricies quis, nisl. Sed sollicitudin quam ut nisi. Vivamus velit sapien, volutpat eu, faucibus id, nonummy id, urna.</p>
+
+			<h6>Level 06 Heading h6</h6>
+			<p>Praesent iaculis pellentesque est. Nulla facilisi. Etiam fringilla vehicula orci. Aliquam fermentum ipsum id nulla. Aliquam interdum laoreet leo. Cras accumsan. Nam pharetra diam id nunc. Integer blandit tellus vulputate felis. Cras aliquam, eros in euismod aliquam, enim nisl mollis metus, quis fringilla ipsum diam ut pede. Mauris a libero ac velit interdum pulvinar. Nunc ipsum mauris, semper rhoncus, feugiat ut, egestas id, diam. Nullam porttitor condimentum risus. Vivamus nec enim eget nisi commodo euismod. Ut turpis. Nullam malesuada rutrum neque. Nam sodales porta elit. Mauris mollis nisl vel augue.</p>
+
+			<h4>Unordered lists (simple)</h4>
+			<ul>
+				<li>Lorem ipsum dolor sit amet</li>
+				<li>Consectetur adipisicing elit</li>
+				<li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+				<li>Ut enim ad minim veniam</li>
+			</ul>
+
+			<h4>Unordered list (simple)</h4>
+			<ul>
+				<li>List item 01</li>
+				<li>List item 02</li>
+				<li>List item 03
+					<ul>
+						<li>List item level 2</li>
+						<li>List item level 2
+							<ul>
+								<li>List item level 3</li>
+								<li>List item level 3</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+			<h4>Ordered list (simple)</h4>
+			<ol>
+				<li>List item 01</li>
+				<li>List item 02</li>
+				<li>List item 03</li>
+				<li>List item 04</li>
+				<li>List item 05</li>
+				<li>List item 06</li>
+			</ol>
+
+			<h4>Ordered list (simple)</h4>
+			<ol>
+				<li>List item 01</li>
+				<li>List item 02</li>
+				<li>List item 03
+					<ol>
+						<li>List item level 2</li>
+						<li>List item level 2
+							<ol>
+								<li>List item level 3</li>
+								<li>List item level 3</li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+			</ol>
+
+			<h4>Ordered list (advanced)</h4>
+			<ol class="fancylist">
+				<li><p>List item 01</p></li>
+				<li><p>List item 02</p></li>
+				<li><p>List item 03</p></li>
+				<li><p>List item 04</p></li>
+				<li><p>List item 05</p></li>
+				<li><p>List item 06</p></li>
+				<li><p>List item 07</p></li>
+				<li><p>List item 08</p></li>
+				<li><p>List item 09</p></li>
+				<li><p>List item 10</p></li>
+			</ol>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+			<h4>Definition lists</h4>
+			<dl>
+				<dt>Lorem ipsum dolor sit amet</dt>
+				<dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+				<dt>Lorem ipsum dolor sit amet</dt>
+				<dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
+			</dl>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+		    <h4>Tables (heading h4)</h4>
+			<table>
+				<caption>Table caption</caption>
+				<thead>
+					<tr>
+						<th>Table head th</th>
+						<th>Table head th</th>
+						<th>Table head th</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td>Table foot td</td>
+						<td>Table foot td</td>
+						<td>Table foot td</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>Table body td</td>
+						<td>Table body td</td>
+						<td>Table body td</td>
+					</tr>
+					<tr>
+						<td>Table body td</td>
+						<td>Table body td</td>
+						<td>Table body td</td>
+					</tr>
+					<tr>
+						<td>Table body td</td>
+						<td>Table body td</td>
+						<td>Table body td</td>
+					</tr>
+					<tr>
+						<td>Table body td</td>
+						<td>Table body td</td>
+						<td>Table body td</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr/>
+
+			<p>
+				<a href="#">Link</a><br>
+				<strong>&lt;strong&gt;</strong><br>
+				<del>&lt;del&gt; deleted</del><br>
+				<dfn>&lt;dfn&gt; dfn</dfn><br>
+				<em>&lt;em&gt; emphasis</em>
+			</p>
+
+			<pre>
+			<code>&lt;html&gt;</code>
+				<code>&lt;head&gt;</code>
+				<code>&lt;/head&gt;</code>
+				<code>&lt;body&gt;</code>
+				<code>&lt;div class = "main"&gt; &lt;div&gt;</code>
+				<code>&lt;/body&gt;</code>
+			<code>&lt;/html&gt; </code>
+			</pre>
+
+			<hr/>
+
+			<h4>Blockquotes</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</blockquote>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+		</section> <!-- end of #main -->
+
+		<footer id="contentinfo" role="contentinfo">
+			<p>Footer &copy;2009-11 <?php // if(date("Y") == 2009) { echo ("2009"); } else { echo ("2009-"); echo date("y"); } ?> Author/Company</p>
+		</footer>
+
+	</div> <!-- end of #document -->
+
+	<!-- Javascript at the bottom for fast page loading -->
+
+	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script>
+
+	<script src="javascript/plugins.js"></script>
+	<script src="javascript/script.js"></script>
+
+	<!-- Change the UA-XXXXX-X to be your site's ID -->
+	<script>
+	    window._gaq = [["_setAccount","UA-XXXXX-X"],["_trackPageview"],["_trackPageLoadTime"]];
+	    Modernizr.load({
+	        load: ("https:" == location.protocol ? "//ssl" : "//www") + ".google-analytics.com/ga.js"
+	    });
+	</script>
+
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6 (http://chromium.org/developers/how-tos/chrome-frame-getting-started). -->
+	<!--[if lt IE 7 ]>
+	    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+	    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+
+</body>
+</html>

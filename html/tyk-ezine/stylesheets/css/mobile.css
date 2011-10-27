@@ -1,0 +1,106 @@
+/*	==========================================================================================
+ *	mobile
+ *	==========================================================================================
+ *	Style sheet for ‘today’s’ smartphones, triggered by media queries
+ *	on devices that are between 321 pixels and 640 pixels.
+ *	==========================================================================================
+ *	Author:		Jonathan van Wunnik
+ *	Project:	Project Name
+ *	Link:		http://www.website.com
+ *	======================================================================================= */
+/*	==========================================================================================
+	Base
+	======================================================================================= */
+/*	==========================================================================================
+	Typography
+	======================================================================================= */
+/*	==========================================================================================
+	Links
+	======================================================================================= */
+/*	==========================================================================================
+	Layout/Grid
+	======================================================================================= */
+/* Document */
+/*	==========================================================================================
+	Serve different DPI images for higher DPI screens
+	======================================================================================= */
+@media only screen and (min-resolution: 300dpi), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5) {
+  
+}
+/* END @media */
+/*	==========================================================================================
+	Serve different DPI images for lower DPI screens
+	======================================================================================= */
+@media only screen and (max-resolution: 299dpi), only screen and (-webkit-max-device-pixel-ratio: 1.5), only screen and (max--moz-device-pixel-ratio: 1.5) {
+  
+}
+/* END @media */
+/*	==========================================================================================
+	Style adjustments for mobile (iPhone) in portrait and landscape view
+	======================================================================================= */
+@media all and (orientation: portrait), (orientation: landscape) {
+  
+}
+/* END @media */
+/*	==========================================================================================
+	Style adjustments for mobile (iPhone) in landscape view
+	======================================================================================= */
+@media all and (orientation: landscape) {
+  
+}
+/* END  @media */
+/*	==========================================================================================
+	Style adjustments for mobile (iPhone) in portrait view
+	======================================================================================= */
+@media all and (orientation: portrait) {
+  
+}
+/* END @media */
+/*	==========================================================================================
+	Non-semantic helper classes
+	======================================================================================= */
+/* Hide for both screenreaders and browsers (http://css-discuss.incutio.com/wiki/Screenreader_Visibility) */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders (http://www.webaim.org/techniques/css/invisiblecontent/ & http://j.mp/visuallyhidden) */
+.visuallyhidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0);
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+/* For image replacement */
+.ir {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-indent: -999em;
+  text-align: left;
+}
+.ir br {
+  display: none;
+}
+/* Clearfix for containing floats — Firefox 3.5+, Safari 4+, Chrome, Opera 9+, IE 6+ (http://nicolasgallagher.com/micro-clearfix-hack/) */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}

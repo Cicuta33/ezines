@@ -1,0 +1,187 @@
+/////////////////////////////////////////////////////////////////////////////////////////////
+//	==========================================================================================
+//	normalize
+//	==========================================================================================
+//	Mostly normalize styles (mainly) picked from HTML5 ✰ Boilerplate (http://html5boilerplate.com/)
+//	==========================================================================================
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+	// Core variables and mixins
+@import url("variables.less");
+
+
+/*	==========================================================================================
+	HTML5 display definitions
+	======================================================================================= */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; }
+audio:not([controls]) { display: none; } // Prevents modern browsers from displaying 'audio' without controls
+[hidden] { display: none; } // Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+
+/*	==========================================================================================
+	Base
+	======================================================================================= */
+
+	/*
+ 	1. Correct text resizing oddly in IE7 when body font-size is set using em units
+ 	   http://clagnut.com/blog/348/#c790
+	2. Force vertical scrollbar in non-IE
+	3. Prevent iOS text size adjust on device orientation change, without disabling user zoom
+	   http://www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+	/* Addresses font-family inconsistency between 'textarea' and other form elements. */
+body, button, input, select, textarea { font-family: sans-serif; }
+
+
+/*	==========================================================================================
+	Links
+	======================================================================================= */
+
+a { color: @linkColor; }
+a:visited { color: @linkVisited; }
+
+a:focus { outline: thin dotted; } // Addresses outline displayed oddly in Chrome
+a:hover, a:active { outline: 0; } // Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test
+
+
+/*	==========================================================================================
+	Embedded content
+	======================================================================================= */
+
+img {
+	border: 0;	// Removes border when inside 'a' element in IE7/8/9, FF3
+	vertical-align: middle; // Remove the gap between images and borders on image containers (http://h5bp.com/e)
+}
+
+svg:not(:root) { overflow: hidden; } // Correct overflow displayed oddly in IE9
+
+
+/*	==========================================================================================
+	Figures
+	======================================================================================= */
+
+figure { margin: 0; } // Addresses margin not present in IE7/8/9, S5, O11
+
+
+/*	==========================================================================================
+	Typography
+	======================================================================================= */
+
+abbr[title] { border-bottom: 1px dotted; } // Addresses styling not present in IE7/8/9, S5, Chrome
+
+b, strong { font-weight: bold; } // Addresses style set to 'bolder' in FF3/4, S4/5, Chrome
+
+blockquote { margin: 1em (@baseline * 2em); }
+
+dfn { font-style: italic; } // Addresses styling not present in S5, Chrome
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid @grayLight; margin: 1em 0; padding: 0; }
+
+ins { background: @yellowIns; color: @black; text-decoration: none; }
+
+mark { background: @yellowMark; color: @black; font-style: italic; font-weight: bold; } // Addresses styling not present in IE7/8/9
+
+pre, code, kbd, samp { // Corrects font family set oddly S4/5, Chrome (http://en.wikipedia.org/wiki/User:Davidgothberg/Test59)
+	font-family: monospace, serif;
+	font-size: 1em;
+}
+
+pre { // Improve readability of pre-formatted text in all browsers
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+q { quotes: none; } // Addresses CSS quotes not supported in IE7
+
+q:before, q:after { // Addresses quote property not supported in S4
+	content: "";
+	content: none;
+}
+
+small { font-size: 85%; }
+
+sub, sup { // Set sub, sup without affecting line-height: http://gist.github.com/413930
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+}
+
+sup { top: -0.2em; }
+sub { bottom: -0.2em; }
+
+
+/*	==========================================================================================
+	Lists
+	======================================================================================= */
+
+ul, ol {
+	margin: 1em 0;
+	padding: 0 0 0 1em;
+}
+
+dd { margin: 0 0 0 1em; }
+
+nav ul,
+nav ol,
+form ol { // Remove margins for lists used in nav and forms
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+/*	==========================================================================================
+	Forms
+	======================================================================================= */
+
+fieldset { // Define consistent border, margin, and padding
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+label { cursor: pointer; } // Indicate that 'label' will shift focus to the associated form element
+
+	/*
+	1. Correct font-size not inheriting in all browsers
+	2. Remove margins in FF3/4 S5 Chrome
+	3. Define consistent vertical alignment display in all browsers */
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; }
+
+button, input { line-height: normal; } // Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+
+	/*
+	1. Display hand cursor for clickable form elements
+	2. Allow styling of clickable form elements in iOS */
+button, input[type="button"], input[type="submit"], input[type="reset"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+
+	/* Consistent box sizing and appearance */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner { // Remove inner padding and border in FF3/4 (hhtp://h5bp.com/l)
+	border: 0;
+	padding: 0;
+}
+
+	/*
+	1. Remove default vertical scrollbar in IE7/8/9
+	2. Allow only vertical resizing */
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+
+/*	==========================================================================================
+	Tables
+	======================================================================================= */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0; // Remove most spacing between table cells
+}

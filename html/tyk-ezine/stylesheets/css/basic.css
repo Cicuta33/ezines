@@ -1,0 +1,146 @@
+/*	==========================================================================================
+ *	basic
+ *	==========================================================================================
+ *	Very basic style sheet for (basic) devices
+ *	==========================================================================================
+ *	Author:		Jonathan van Wunnik
+ *	Project:	Project Name
+ *	Link:		http://www.website.com
+ *	======================================================================================= */
+/*	==========================================================================================
+	Base
+	======================================================================================= */
+body {
+  font-size: 13px;
+  line-height: 1.231;
+  margin: 0;
+}
+body,
+select,
+input,
+textarea {
+  background: #ffffff;
+  color: #141414;
+}
+/*	==========================================================================================
+	Links
+	======================================================================================= */
+a, a:active, a:visited {
+  color: #284678;
+}
+a:hover {
+  color: #080e18;
+}
+/*	==========================================================================================
+	Typography
+	======================================================================================= */
+body {
+  font-family: Geneva, Tahoma, Verdana, sans-serif;
+  letter-spacing: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+/*	==========================================================================================
+	Headings
+	======================================================================================= */
+h1 {
+  font-size: 2em;
+  line-height: 1.5px;
+  margin-top: 0.8888888888888888px;
+  margin-bottom: 0.4444444444444444px;
+}
+h2 {
+  font-size: 1.5em;
+  line-height: 2px;
+  margin-top: 0.6666666666666666px;
+  margin-bottom: 0.3333333333333333px;
+}
+h3 {
+  font-size: 1.17em;
+  line-height: 1.2820512820512822px;
+  margin-top: 0.5199999999999999px;
+  margin-bottom: 0.25999999999999995px;
+}
+h4 {
+  font-size: 1em;
+  line-height: 1.5px;
+  margin-top: 0.4444444444444444px;
+  margin-bottom: 0.2222222222222222px;
+}
+h5 {
+  font-size: 0.875em;
+  line-height: 1.7142857142857142px;
+  margin-top: 0.3888888888888889px;
+  margin-bottom: 0.19444444444444445px;
+}
+h6 {
+  font-size: 0.75em;
+  line-height: 2px;
+  margin-top: 0.3333333333333333px;
+  margin-bottom: 0.16666666666666666px;
+}
+/*	==========================================================================================
+	Lists
+	======================================================================================= */
+li p {
+  margin-bottom: 0;
+}
+/*	==========================================================================================
+	Tables
+	======================================================================================= */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td {
+  vertical-align: top;
+}
+th {
+  font-weight: bold;
+  white-space: nowrap;
+}
+tfoot {
+  font-style: italic;
+}
+td {
+  vertical-align: top;
+}
+th {
+  background: #808080;
+}
+tr:nth-child(odd) {
+  background: #e6e6e6;
+}
+/*	==========================================================================================
+	Form elements
+	======================================================================================= */
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font: inherit;
+  text-transform: inherit;
+  line-height: inherit !important;
+}
+select {
+  background-color: transparent;
+  padding: 0;
+}
