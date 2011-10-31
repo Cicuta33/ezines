@@ -496,10 +496,3 @@ AddCharset utf-8 .html .css .js .xml .json .rss .atom
 <IfModule php5_module>
 	php_value session.cookie_httponly true
 </IfModule>
-
-Options +FollowSymLinks
-RewriteEngine On
-RewriteBase /mag/                   
-
-RewriteCond %{REQUEST_FILENAME} !-f 
-RewriteRule ^ index\.php [L]
