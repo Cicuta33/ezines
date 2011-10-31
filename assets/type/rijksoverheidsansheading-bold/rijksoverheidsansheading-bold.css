@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/*
+	rijksoverheidsansheading-bold.css
+	-------------------------------------------------------------------
+	The Fontspring @font-face syntax:
+	http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax
+	-------------------------------------------------------------------
+*/
+
+
+@font-face {
+    font-family: "RijksoverheidSansHeading-Bold";
+    src: url("rijksoverheidsansheading-bold.eot");
+    src: url("rijksoverheidsansheading-bold.eot?#iefix") format("embedded-opentype"),
+         url("rijksoverheidsansheading-bold.woff") format("woff"),
+         url("rijksoverheidsansheading-bold.ttf") format("truetype"),
+         url("rijksoverheidsansheading-bold.svg#RijksoverheidSansHeading-Bold") format("svg");
+	font-weight: bold;
+	font-style: normal;
+}

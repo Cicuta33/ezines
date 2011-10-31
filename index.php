@@ -44,7 +44,7 @@ $url = explode('/mag/',$_SERVER['REQUEST_URI']);  ?>
 
 	<!-- Google Webfont Loader (see also dealing wiht FOUT: http://www.html5rocks.com/tutorials/webfonts/quick/#toc-fout) -->
 	<script src="javascript/libs/webfont.js"></script>
-	<script>WebFont.load({custom:{families:["RijksoverheidSansHeading-Bold","RijksoverheidSansText-Regular","RijksoverheidSerif-Regular"],urls:["/assets/type/ro-sansheading-bold/rijksoverheidsansheading-bold.css","/assets/type/ro-sanstext-regular/rijksoverheidsanstext-regular.css","/assets/type/ro-serif-regular/rijksoverheidserif-regular.css"]}});</script>
+	<script>WebFont.load({custom:{families:["RijksoverheidSansHeading-Bold","RijksoverheidSansText-Regular","RijksoverheidSerif-Regular","RijksoverheidSerif-Italic"],urls:["/assets/type/rijksoverheidsansheading-bold/rijksoverheidsansheading-bold.css","/assets/type/rijksoverheidsanstext-regular/rijksoverheidsanstext-regular.css","/assets/type/rijksoverheidserif-regular/rijksoverheidserif-regular.css","/assets/type/rijksoverheidserif-italic/rijksoverheidserif-italic.css"]}});</script>
 
 </head>
 <body>
