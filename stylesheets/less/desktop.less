@@ -64,7 +64,7 @@
 	/* Document */
 [role="document"] {
 	.center-block();
-	
+
 }
 
 	.ie7, .ie8 { [role="document"] { width: 984px; } } // Min- and max-width does not work in IE7/8
@@ -79,16 +79,16 @@
 	#document {
 		.center-block(44px, 44px);
 		.box-shadow(0,0);
-		
+
 	}
-		
+
 	.article-0 {
-		 
+
 		> div:first-child {
 			background-color: transparent;
-	
+
 			padding: 0;
-			
+
 			> div {
 				width: 50%;
 				float: right;
@@ -96,7 +96,7 @@
 				> * {
 					margin-left: 32px;
 					margin-right: 24px;
-					
+
 				}
 			}
 			p.image {
@@ -109,23 +109,23 @@
 				top: 0;
 				bottom: 0;
 				overflow: hidden;
-				
+
 				img {
 					position: absolute;
 					left: 0;
 					top: 0;
 					height: 100%;
 					max-width: none;
-					
+
 				}
 			}
-			
-			
+
+
 		}
 	}
-	
+
 	section.toc {
-	
+
 		ol {
 			margin: 0 -24px -24px 0;
 			li {
@@ -135,17 +135,17 @@
 				a {
 					min-height: 190px;
 					margin-right: 24px;
-					padding: 12px;	
+					padding: 12px;
 				}
 			}
 		}
 	}
-	
-	
-	
-	
+
+
+
+
 	.prev-next {
-		
+
 		width: 50px;
 		margin-left: -25px;
 		ol {
@@ -155,18 +155,18 @@
 		}
 		ul li{
 			text-indent: 0;
-			
+
 		}
-		
+
 	}
 	.init {
 		#document {
 			visibility: hidden;
 		}
 	}
-	
-		
-	
+
+
+
 
 /*	==========================================================================================
 	Layout adjustments for 768px width
@@ -177,7 +177,7 @@
 	[role="document"] {
 		max-width: 720px;
 	}
-	
+
 
 }	/* END @media */
 
@@ -210,8 +210,8 @@
 			left: -15px;
 			right: -15px;
 		}
-	}	
-	
+	}
+
 
 }	/* END @media */
 
@@ -219,7 +219,7 @@
 /*	==========================================================================================
 	Style adjustments for tablet (iPad)) in landscape + portrait view mode
 	======================================================================================= */
- @media only screen and (device-width: 768px) { 
+ @media only screen and (device-width: 768px) {
 
 	html {
 		background: url(img/ipad-bg.jpg);
@@ -229,11 +229,11 @@
 	[role="document"] {
 
 	}
-	
-	
+
+
 	#document {
 		max-width: 100%;
-		margin: 0;	
+		margin: 0;
 		> header {
 			display: none;
 			position: absolute;
@@ -242,7 +242,7 @@
 			right: 0;
 			nav {
 				.transition(all, 0.3s);
-				
+
 				background-color: #123552;
 				//.opacity(0);
 				top: 0;
@@ -259,8 +259,8 @@
 				}
 			}
 		}
-		
-		
+
+
 	}
 	.home #document {
 			header {
@@ -271,15 +271,15 @@
 				}
 			}
 		}
-	
+
 	nav.prev-next { display: none; }
-	
-	
+
+
 	.has-menu {
 		#document header nav { top: 0; .opacity(100); }
 	}
-	
-	
+
+
 	#pages {
 		.transition(height, 0.2s);
 		position: absolute;
@@ -293,31 +293,31 @@
 		background-color: #123552;
 		.box-shadow(0,0,3px);
 		width: 100%;
-		overflow: auto;	
+		overflow: auto;
 		ol.indicator {
 			position: absolute;
 			left: 0;
 			top: 0;
 			width: 100%;
-			list-style: none;			
+			list-style: none;
 			margin: 0;
 			padding: 0;
-			
+
 			li {
-					
+
 				float: left;
-					
+
 				a {
 					height: 11px;
 					text-indent: -1234em;
 					display: block;
-					
+
 					.transition(all, 0.3s);
 					margin: 10px 5px 11px 0;
 					background: #415d75 url(img/nav.png) 50% -130px;
 					> * {
 						display: none;
-						
+
 					}
 				}
 				&:first-child  {
@@ -330,7 +330,7 @@
 				}
 			}
 		}
-	}	
+	}
 	.open-index #pages {
 			height: 120px;
 			ol.indicator {
@@ -362,9 +362,9 @@
 				&.home, &.toc {
 					a {
 						background-color: #fff;
-						 
-						
-						
+
+
+
 					}
 				}
 				&.current a {
@@ -374,14 +374,14 @@
 			}
 		}
 	}
-	
-		
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
 
 }	/* END @media */
 
@@ -392,7 +392,7 @@
 @media only screen and (device-width: 768px) and (orientation: landscape) {
 
 		/* Document */
-	
+
 	#document {
 		.box-shadow(0,0,0);
 		article {
@@ -404,9 +404,9 @@
 			min-height: 690px;
 		}
 	}
-	
-	
-	
+
+
+
 
 }	/* END @media */
 

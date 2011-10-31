@@ -1,4 +1,4 @@
-<?php 
+<?php
 $url = explode('/mag/',$_SERVER['REQUEST_URI']);  ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js ie ie6" lang="en">	<![endif]-->
@@ -41,17 +41,17 @@ $url = explode('/mag/',$_SERVER['REQUEST_URI']);  ?>
 
 	<!-- All Javascript at the bottom, except for Modernizr (enables HTML5 elements and feature detects) (http://www.modernizr.com) plus Selectivzr (enables CSS3 selectors for IE) (http://selectivizr.com) -->
 	<script src="javascript/libs/modernizr-2.0.6.min.js"></script>
-	
+
 	<!-- Google Webfont Loader (see also dealing wiht FOUT: http://www.html5rocks.com/tutorials/webfonts/quick/#toc-fout) -->
 	<script src="javascript/libs/webfont.js"></script>
-	<script>WebFont.load({custom:{families:["RijksoverheidSansHeadingBold","RijksoverheidSansTextRegular","RijksoverheidSerifRegular"],urls:["type/rijksoverheidsansheading-bold.css","type/rijksoverheidsanstext-regular.css","type/rijksoverheidserif-regular.css"]}});</script>
-	
+	<script>WebFont.load({custom:{families:["RijksoverheidSansHeading-Bold","RijksoverheidSansText-Regular","RijksoverheidSerif-Regular"],urls:["/assets/type/ro-sansheading-bold/rijksoverheidsansheading-bold.css","/assets/type/ro-sanstext-regular/rijksoverheidsanstext-regular.css","/assets/type/ro-serif-regular/rijksoverheidserif-regular.css"]}});</script>
+
 </head>
 <body>
 	<div id="document"<?php echo ($url[1]==''?' class="home"':''); ?>>
 		<header>
 			<h1 class="logo">Rijksoverheid Magazines</h1>
-			
+
 			<nav role="navigation">
 				<ul>
 					<li class="home"><a href="/mag/">home</a></li>
@@ -61,21 +61,21 @@ $url = explode('/mag/',$_SERVER['REQUEST_URI']);  ?>
 				</ul>
 			</nav>
 		</header>
-	<?php 
-		@include('_'.($url[1]==''?'cover':$url[1]).'.php'); 
+	<?php
+		@include('_'.($url[1]==''?'cover':$url[1]).'.php');
 	?>
 	</div>
-	
+
 
 	<!-- Javascript at the bottom for fast page loading -->
 
-	
+
 	<script src="javascript/libs/jquery-1.6.4.min.js"> </script>
 	<script src="javascript/libs/swipe.js"> </script>
 	<script src="javascript/plugins.js"> </script>
 	<script src="javascript/script.js"> </script>
 
-	
+
 
 </body>
 </html>

@@ -386,7 +386,7 @@ video {
 	Typography
 	======================================================================================= */
 body {
-  font-family: "RijksoverheidSerifRegular", Arial, sans-serif;
+  font-family: "RijksoverheidSerif-Regular", Arial, sans-serif;
   font-size: 81.25%;
   line-height: 1.5;
   letter-spacing: 0;
@@ -397,12 +397,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "RijksoverheidSansHeadingBold", Arial, sans-serif;
+  font-family: "RijksoverheidSansHeading-Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
 }
 blockquote, .toc h2 {
-  font-family: "RijksoverheidSansTextRegular", Arial, sans-serif;
+  font-family: "RijksoverheidSansText-Regular", Arial, sans-serif;
 }
 .toc h2 {
   font-weight: normal;
@@ -849,25 +849,31 @@ article p {
 article p.intro {
   font-size: 1.3333em;
   /* 16px */
+
   line-height: 1.125em;
   /* 18px */
+
   margin-bottom: 1.125em;
   margin-top: 0em;
 }
 article h1, article h2, article h3 {
-  font-family: "RijksoverheidSansTextRegular", Arial, sans-serif;
+  font-family: "RijksoverheidSansText-Regular", Arial, sans-serif;
   font-size: 1.1667em;
   /* 14px */
+
   line-height: 1.2857em;
   /* 18px */
+
   margin-top: 1.2857em;
   margin-bottom: 0em;
 }
 article h1 {
   font-size: 2em;
   /* 24px */
+
   line-height: 1.5em;
   /* 36px */
+
   margin-top: 0.75em;
 }
 article header h1 {
@@ -876,16 +882,20 @@ article header h1 {
 article h2, article h3 {
   font-size: 1.1667em;
   /* 14px */
+
   line-height: 1.2857em;
   /* 18px */
+
   margin-top: 1.2857em;
   font-weight: normal;
 }
 article blockquote {
   font-size: 1.5em;
   /* 18px */
+
   line-height: 1em;
   /* 18px */
+
   margin-top: 1em;
   margin-bottom: 0em;
 }
