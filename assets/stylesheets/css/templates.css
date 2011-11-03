@@ -82,7 +82,6 @@ article section h1.full {
 article section blockquote {
   float: left;
   margin: 24px;
-  padding: 24px;
   text-align: right;
 }
 article section blockquote.right {
@@ -164,11 +163,12 @@ article.layout-1 header img + h1 {
   width: 456px;
 }
 article.layout-1 header.full {
-  padding: 6em 240px 8em 240px;
+  padding: 0 240px 0 240px;
 }
 article.layout-1 header.full h1 {
   display: block;
   width: auto;
+  margin-top: 40%;
 }
 article.layout-1 header.full h1 + h2 {
   margin-top: 2em;
@@ -183,13 +183,7 @@ article.layout-1 header.image {
   margin-right: -44px;
   padding-left: 284px;
   padding-right: 284px;
-}
-article.layout-1 header.image > img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1;
+  background-size: cover;
 }
 article.layout-1 header.image:first-child {
   margin-top: -44px;
@@ -205,17 +199,16 @@ article.layout-1 section section {
 }
 article.layout-1 section blockquote {
   width: 296px;
-  border-top: 5px solid transparent;
-  margin: 8px 24px 0 -240px;
-  padding: .375em 0 0.375em 80px;
+  margin: 0 24px 24px -240px;
+  padding: 0 0 0 80px;
 }
 article.layout-1 section blockquote.right {
-  margin: 8px -240px 0 24px;
-  padding: .375em 80px 0.375em 0;
+  margin: 0 -240px 24px 24px;
+  padding: 0 80px 0 0;
 }
 article.layout-1 section blockquote.full {
   margin-right: -240px;
-  padding: .375em 0 1.5em 0;
+  padding: 0 0 1.5em 0;
   width: auto;
 }
 article.layout-1 section aside {
@@ -300,9 +293,6 @@ article.color-1 h1, article.color-1 h2, article.color-1 h3 {
 article.color-1 a, article.color-1 blockquote, article.color-1 p.intro {
   color: #ca005d;
 }
-article.color-1 section blockquote {
-  border-color: #ca005d;
-}
 article.color-1.layout-2 > div > section > section, article.color-1.layout-2 > div > header, article.color-1.layout-2 > div > footer {
   border-color: #ca005d;
 }
@@ -311,9 +301,6 @@ article.color-2 h1, article.color-2 h2, article.color-2 h3 {
 }
 article.color-2 a, article.color-2 blockquote, article.color-2 p.intro {
   color: #42145f;
-}
-article.color-2 section blockquote {
-  border-color: #42145f;
 }
 article.color-2.layout-2 > div > section > section, article.color-2.layout-2 > div > header, article.color-2.layout-2 > div > footer {
   border-color: #42145f;
@@ -324,9 +311,6 @@ article.color-3 h1, article.color-3 h2, article.color-3 h3 {
 article.color-3 a, article.color-3 blockquote, article.color-3 p.intro {
   color: #007bc7;
 }
-article.color-3 section blockquote {
-  border-color: #007bc7;
-}
 article.color-3.layout-2 > div > section > section, article.color-3.layout-2 > div > header, article.color-3.layout-2 > div > footer {
   border-color: #007bc7;
 }
@@ -336,9 +320,6 @@ article.color-4 h1, article.color-4 h2, article.color-4 h3 {
 article.color-4 a, article.color-4 blockquote, article.color-4 p.intro {
   color: #db2b1e;
 }
-article.color-4 section blockquote {
-  border-color: #db2b1e;
-}
 article.color-4.layout-2 > div > section > section, article.color-4.layout-2 > div > header, article.color-4.layout-2 > div > footer {
   border-color: #db2b1e;
 }
@@ -347,9 +328,6 @@ article.color-5 h1, article.color-5 h2, article.color-5 h3 {
 }
 article.color-5 a, article.color-5 blockquote, article.color-5 p.intro {
   color: #007bc7;
-}
-article.color-5 section blockquote {
-  border-color: #007bc7;
 }
 article.color-5.layout-2 > div > section > section, article.color-5.layout-2 > div > header, article.color-5.layout-2 > div > footer {
   border-color: #007bc7;

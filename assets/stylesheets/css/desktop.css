@@ -90,9 +90,9 @@
 #document {
   display: block;
   margin: 44px auto 44px;
-  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
 }
 .article-0 > div:first-child {
   background-color: transparent;
@@ -139,8 +139,8 @@ section.toc ol li a {
   padding: 12px;
 }
 .prev-next {
-  width: 50px;
-  margin-left: -25px;
+  width: 90px;
+  margin-left: -45px;
 }
 .prev-next ol .prev, .prev-next ol .next {
   display: block;
@@ -355,7 +355,6 @@ section.toc ol li a {
   }
   #document article > div {
     padding: 44px;
-    min-height: 690px;
   }
 }
 /* END @media */
@@ -363,9 +362,7 @@ section.toc ol li a {
 	Style adjustments for tablet (iPad) in portrait view mode (768px)
 	======================================================================================= */
 @media only screen and (device-width: 768px) and (orientation: portrait) {
-  #document article > div {
-    min-height: 946px;
-  }
+  
 }
 /* END @media */
 /*	==========================================================================================

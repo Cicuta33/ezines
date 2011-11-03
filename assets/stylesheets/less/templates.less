@@ -1,9 +1,9 @@
-
-
+	
+	
 	//gutter: 24
 	//total width: 984
 	//column: 56
-
+	
 // toc colors
 
 .toc, .open-index #pages .indicator {
@@ -12,7 +12,7 @@
 	.color-3 a { background-color: #e1eddb; } /* groen */
 	.color-4 a { background-color: #e3dce7; } /* paars */
 	.color-5 a { background-color: #f7d9e7; } /* lichtpaars */
-
+	
 
 }
 
@@ -23,8 +23,8 @@ article.article-0 {
 	background-color: #007bc7;
 	> div:first-child {
 		color: #fff;
-
-
+		
+	
 		dl {
 			dd + dt {
 				border-color: #fff;
@@ -32,7 +32,7 @@ article.article-0 {
 			> * {
 				color: #fff;
 			}
-		}
+		} 
 		nav {
 			h2 {
 				color: #f9e11e
@@ -47,23 +47,23 @@ article.article-0 {
 
 // template layouts
 
-// default
+// default 
 article {
 	blockquote {
 		margin: 1em 0;
-
+		
 	}
-
+	
 }
 
 
 
 // general template
 article {
-
-
+		
+	
 	color: #4d4d4d;
-
+	
 
 	header {
 		position: relative;
@@ -82,10 +82,10 @@ article {
 			font-size: 1.5em;
 			margin-top: 0;
 		}
-
-
-
-
+		
+		
+		
+		
 	}
 	section {
 		position: relative;
@@ -98,12 +98,11 @@ article {
 				width: auto;
 			}
 		}
-
+		
 		blockquote {
 			float: left;
 			margin: 24px;
-			padding: 24px;
-			text-align: right;
+			text-align: right; 
 			&.right {
 				float: right;
 				text-align: left;
@@ -124,7 +123,7 @@ article {
 		section+aside, aside.left+aside{
 			float: right;
 			clear: right;
-
+			
 		}
 		aside+section {
 			margin-left: 24px;
@@ -141,27 +140,27 @@ article {
 			float: none;
 			width: auto;
 			margin-left: 0;
-
+			
 		}
-
+		
 		&.left, &.right {
 			width: 696px;
 			margin-left: 240px;
 		}
 		&.left {
 			margin-left: 0;
-
+			
 		}
 		figcaption {
 			margin-top: 0.75em;
 			color: #666;
 			width: 456px;
 		}
-
-
+		
+		
 	}
 	.image-slider.processed {
-
+		
 	}
 	.image-slider figure {
 		ol {
@@ -172,16 +171,16 @@ article {
 				img {
 					float: left;
 					max-width: 536px;
-
+					
 				}
 			}
 		}
-
-
+		
+		
 	}
 	section section figure {
 		margin: 0 0 1.5em 0;
-
+		
 		&.left {
 			float: left;
 			width: 456px;
@@ -192,9 +191,9 @@ article {
 			margin: 0 -240px 1.5em 24px;
 			float: right;
 		}
-	}
-
-
+	} 
+	
+	
 }
 
 
@@ -205,10 +204,11 @@ article.layout-1 {
 			width: 456px;
 		}
 		&.full {
-			padding: 6em 240px 8em 240px;
+			padding: 0 240px 0 240px;
 			h1 {
 				display: block;
 				width: auto;
+				margin-top: 40%;
 			}
 			h1 + h2 {
 				margin-top: 2em;
@@ -223,48 +223,42 @@ article.layout-1 {
 			margin-left: -44px;
 			margin-right: -44px;
 			padding-left: 284px;
-			padding-right: 284px;
-			> img {
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 100%;
-				z-index: 1;
-			}
+			padding-right: 284px; 
+			background-size: cover;
+			
 		}
 		&.image:first-child {
 			margin-top: -44px;
 		}
 	}
-
+	
 	section {
-
+	
 		h1 {
 			margin-left: 240px;
 			width: 456px;
 		}
-
+		
 		section {
 			float: left;
 			width: 456px;
 			margin-left: 240px;
-
+			
 		}
-
-
+	
+	
 		blockquote {
 
 			width: 296px;
-			border-top: 5px solid transparent;
-			margin: 8px 24px 0 -240px;
-			padding: .375em 0 0.375em 80px;
+			margin: 0 24px 24px -240px;
+			padding: 0 0 0 80px; 
 			&.right {
-				margin: 8px -240px 0 24px;
-				padding: .375em 80px 0.375em 0;
+				margin: 0 -240px 24px 24px;
+				padding: 0 80px 0 0;
 			}
 			&.full {
 				margin-right: -240px;
-				padding: .375em 0 1.5em 0;
+				padding: 0 0 1.5em 0;
 				width: auto;
 			}
 		}
@@ -276,12 +270,12 @@ article.layout-1 {
 		}
 		aside+section {
 			margin-left: 24px;
-		}
+		}	
 	}
-
+	
 	section section figure {
 		margin: 0 0 1.5em 0;
-
+		
 		&.left {
 			float: left;
 			width: 456px;
@@ -292,9 +286,9 @@ article.layout-1 {
 			margin: 0 -240px 1.5em 24px;
 			float: right;
 		}
-	}
-
-
+	} 
+	
+	
 }
 article.layout-2 {
 	> div {
@@ -319,17 +313,17 @@ article.layout-2 {
 			}
 		}
 		> section > section {
-
+			
 		}
-
+		
 		> section {
 			aside {
 				margin-left: 104px;
 				width: 216px;
 				position: relative;
 				z-index: 2;
-
-
+				
+					
 			}
 			section + aside {
 				margin-left: 24px;
@@ -337,95 +331,70 @@ article.layout-2 {
 			aside + section {
 				margin-left: 0;
 			}
-
+			
 		}
-
+		
 	}
-
-
-
+	
+	
+	
 }
 
-article.color-1 { background-color: #d9ebf7;}
+article.color-1{ background-color: #d9ebf7;}
 article.color-2 { background-color: #f9dfdd;}
 article.color-3 { background-color: #e1eddb;}
 article.color-4 { background-color: #e3dce7;}
 article.color-5 { background-color: #f7d9e7;}
 
-article.color-1 {
+article.color-1 { 
 	h1, h2, h3 { color: #007bc7; }
 	a, blockquote, p.intro {
 		color: #ca005d;
-	}
-	section {
-		blockquote {
-			border-color: #ca005d;
-		}
-	}
+	}  
 	&.layout-2 > div {
 		> section > section, > header, > footer {
 			border-color: #ca005d;
 		}
 	}
 }
-article.color-2 {
+article.color-2 { 
 	h1, h2, h3 { color: #d52b1e; }
 	a, blockquote, p.intro {
 		color: #42145f;
-	}
-	section {
-		blockquote {
-			border-color: #42145f;
-		}
-	}
+	}  
 	&.layout-2 > div {
 		> section > section, > header, > footer {
 			border-color: #42145f;
 		}
 	}
 }
-article.color-3 {
+article.color-3 { 
 	h1, h2, h3 { color: #39870c; }
 	a, blockquote, p.intro {
 		color: #007bc7;
-	}
-	section {
-		blockquote {
-			border-color: #007bc7;
-		}
-	}
+	}  
 	&.layout-2 > div {
 		> section > section, > header, > footer {
 			border-color: #007bc7;
 		}
 	}
 }
-article.color-4 {
+article.color-4 { 
 	h1, h2, h3 { color: #42145f; }
 	a, blockquote, p.intro {
 		color: #db2b1e;
-	}
-	section {
-		blockquote {
-			border-color: #db2b1e;
-		}
-	}
+	}  
 	&.layout-2 > div {
 		> section > section, > header, > footer {
 			border-color: #db2b1e;
 		}
 	}
 }
-article.color-5 {
+article.color-5 { 
 	h1, h2, h3 { color: #ca005d; }
 	a, blockquote, p.intro {
 		color: #007bc7;
-	}
-	section {
-		blockquote {
-			border-color: #007bc7;
-		}
-	}
+	}  
 	&.layout-2 > div {
 		> section > section, > header, > footer {
 			border-color: #007bc7;
@@ -433,14 +402,14 @@ article.color-5 {
 	}
 }
 
-
+ 
 
 @media only screen and (max-width: 1004px) {
 	// layout-1 {
 	#document article{
 		&.layout-1 {
-
-
+		
+			
 			header {
 				max-width: 616px;
 				margin-left: auto;
@@ -463,12 +432,12 @@ article.color-5 {
 					}
 				}
 			}
-
+			
 			h1 {
 				width: auto;
 			}
-
-
+				
+			
 			section{
 				max-width: 616px;
 				h1 {
@@ -488,15 +457,15 @@ article.color-5 {
 				aside.left {
 					margin: 0;
 				}
-
+				
 				blockquote {
 					float: none;
 					width: auto;
 					padding: 0;
 					margin: 0 0 1.5em 0;
-
+					
 				}
-
+				
 			}
 			figure {
 				max-width: 616px;
@@ -512,22 +481,22 @@ article.color-5 {
 					border: none;
 					padding-left: 0;
 				}
-
-
+		
+				
 				> section {
 					aside {
 						margin-left: 0;
 						width: auto;
-
+							
 					}
 					section + aside {
 						margin-left: 0;
 					}
-
+					
 				}
-
-			}
-
+				
+			}	
+			
 		}
 	}
 

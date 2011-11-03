@@ -23,6 +23,7 @@ var eZine =  {
 		//eZine.isIpad = true;
 		
 		
+		
 	
 		
 		// touch actions
@@ -150,6 +151,7 @@ var eZine =  {
 							var a = $(this);
 							i++;
 							var text = a.find('h2').length ? a.find('h2').text() : a.text();
+							
 							var link = a[0].href.replace(document.location.protocol+'//'+document.location.host,'');
 							
 							ol.append('<li class="'+a.closest('li').attr('class')+' '+(link==currentHref?'current':'')+'"><a href="'+a.attr('href')+'">'+i+' <em><span>'+text+'</span></em><span/></a></li>'); 
@@ -169,7 +171,6 @@ var eZine =  {
 							}
 							
 						});
-						
 						$('<nav class="prev-next"/>').append(ol).append('<p>/'+i+'</p>').append(ul).appendTo('#document');
 						
 						if (!ol.find('.prev').length) {
@@ -213,10 +214,14 @@ var eZine =  {
 			
 			var article = $('<article data-index="'+i+'" class="article-'+i+' '+li.attr('class')+'"></article>');
 			if ($(this).hasClass('current')) {
+				
 				currentToggle = true;
 				eZine.currentIndex = i;
 				current.attr('data-index',i).addClass('current article-'+i);
+				
 				eZine.articles[i] = current.find('>div').clone();
+				current.html('')
+
 			}
 			else if (!currentToggle) current.before(article);
 			else if (currentToggle) {
@@ -232,9 +237,18 @@ var eZine =  {
 			container: document.getElementById('container'),
 			selector: '>article',
 			startSlide: eZine.currentIndex,
-			isNavigator: true
+			isNavigator: true,
+			callback: function(e,index){
+				
+				if (this.callBackable) {
+				
+					this.callBackable = null;
+					eZine.renderArticle(index, true);
+				}
+			}
 			
 		});
+		
 		$('body').removeClass('init');
 		$('body').addClass('swipable');
 		
@@ -272,13 +286,13 @@ var eZine =  {
 		});
 		
 		eZine.pages.find('li:not(.loaded, .current)').each(function(){
-			loadArticle(this, true);
+			loadArticle(this);
 		});
 		
 		
-		function loadArticle(li, stack){
+		function loadArticle(li){
 			li = $(li);
-			var h1;
+			
 			$.ajax({
 				url: li.find('a').attr('href'),
 				
@@ -288,7 +302,7 @@ var eZine =  {
 					data = $('<div>'+data+'</div>').find('#document > article:first').find('>div');
 					
 					
-					if (!stack) $('article.article-'+li.index()).html(data);
+				
 					eZine.articles[li.index()] = data;
 					
 				}
@@ -296,42 +310,55 @@ var eZine =  {
 			});
 		}
 	},
-	renderArticle: function(index){
+	renderArticle: function(index, slided){
 		
 		
 		
 		
-		$('#container > article').removeClass('prev next current').each(function(i){
-			if (i>index-2 && i<index+2) {
+		
+		$('#container').css({minHeight: window.innerHeight});
+		$('#container > article').css({minHeight: window.innerHeight}).each(function(i){
+				var article = $(this);
 
 				if (i==index) {
 					
-					var article = $(this);
-					setTimeout(function(){
-						
-						article.addClass('current');
-					},1000);
-				}
-				if (!$('>div',this).length) {
-					$(this).html(eZine.articles[i]);
-					$(this).find('figure:has(video)').each(function(){
+					
+					article.html(eZine.articles[i]);
+					
+					article.find('figure:has(video)').each(function(){
 						$(this).html($(this).html());
 					});
 					
-					$(this).find('section.image-slider>figure').each(function(){
+					article.find('section.image-slider>figure').each(function(){
 						var _this = this;
 						eZine.imageSwiper = new Swipe(_this, {
 							container: $('>ol', _this)[0],
 							selector: '>li'
 						});
 					});
-				}
+					if (eZine.swiper) {
+						$('html,body').scrollTop(eZine.swiper.slides[index].scrollPos?eZine.swiper.slides[index].scrollPos:0);
+						//eZine.swiper.element.style.height = eZine.swiper.slides[index].offsetHeight + 'px';
+					}
+			    	
+			    	if (typeof window.history.pushState == 'function') {
+						var a = eZine.pages.find('li#article-'+index+' > a');
+						history.pushState({}, a.find('em').text(), a.attr('href'));
+						document.title = a.find('em').text();
+					}
+			    	
+			    	
+			    	
+			    	article.addClass('done');
+			    	
+					
+				
 				
 				
 			} 
 			else {
 
-				$(this).html('');
+				article.removeClass('done').html('');
 			}
 		});
 		
@@ -340,8 +367,9 @@ var eZine =  {
 
 };
 eZine.init();
+if (false) {
 var currentcss;
-/*
+
 var timer =setInterval(function(){
 	
 	$.ajax({
@@ -353,6 +381,7 @@ var timer =setInterval(function(){
 					currentcss = data;
 					$('.desktop-css').attr('href',$('.desktop-css').attr('href').split('?')[0]+'?'+Math.random());
 					$('.base-css').attr('href',$('.base-css').attr('href').split('?')[0]+'?'+Math.random());
+					$('.template-css').attr('href',$('.templates-css').attr('href').split('?')[0]+'?'+Math.random());
 				}
 				
 			}
@@ -362,7 +391,7 @@ var timer =setInterval(function(){
 	
 	
 },200);
-*/
+}
 
 window.onorientationchange = function() {
 	

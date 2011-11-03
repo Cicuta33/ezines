@@ -93,10 +93,16 @@ Swipe.prototype = {
     var sameSlide = ((index == this.getPos()) && !force);
     	
     
-
+	if (!sameSlide && this.isNavigator) {
+	    	
+	    	var backgroundColor = (index>0 && index<this.slides.length-1) ? window.getComputedStyle(this.slides[index],null).getPropertyValue("background-color") : 'transparent';
+		    document.body.style.backgroundColor = backgroundColor;
+	}
+    
+    
     // set duration speed (0 represents 1-to-1 scrolling)
     style.webkitTransitionDuration = style.MozTransitionDuration = style.msTransitionDuration = style.OTransitionDuration = style.transitionDuration = duration + 'ms';
-
+    
     // translate to given index position
     style.webkitTransform = 'translate3d(' + -(index * this.width) + 'px,0,0)';
     style.msTransform = style.MozTransform = style.OTransform = 'translateX(' + -(index * this.width) + 'px)';
@@ -110,24 +116,12 @@ Swipe.prototype = {
     
     if (!sameSlide && this.isNavigator) {
     	
-    	var backgroundColor = (index>0 && index<this.slides.length-1) ? window.getComputedStyle(this.slides[index],null).getPropertyValue("background-color") : 'transparent';
-	    document.body.style.backgroundColor = backgroundColor;
-    	if (this.options.animated) {
-    		$('html,body').stop().animate({scrollTop: this.slides[index].scrollPos?this.slides[index].scrollPos:0},this.options.animated,'swing',function(){
-    			eZine.renderArticle(index);
-    		});
-    	}
-    	else {
-    		$('html,body').scrollTop(this.slides[index].scrollPos?this.slides[index].scrollPos:0);
-    		_this.element.style.height = _this.slides[index].offsetHeight + 'px';
-    		eZine.renderArticle(index);
-    	}
-    	
-    	if (typeof window.history.pushState == 'function') {
-			var a = eZine.pages.find('li#article-'+index+' > a');
-			history.pushState({}, a.find('em').text(), a.attr('href'));
-			document.title = a.find('em').text();
+		this.callBackable = true;
+		if (force) {
+			this.callback(null, index, this.slides[index]);
 		}
+    	
+
     	
     }
     
@@ -189,14 +183,11 @@ Swipe.prototype = {
   },
 
   scroll: function(){
-	  //console.log(window.pageYOffset);
 	  this.slides[this.getPos()].scrollPos = window.pageYOffset;
   },
   
   transitionEnd: function(e) {
-    
     if (this.delay) this.start();
-    
     this.callback(e, this.index, this.slides[this.index]);
 
   },

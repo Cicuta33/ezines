@@ -1,4 +1,3 @@
-
 <article class="layout-1 color-1">
 	<div>
 		<header>
@@ -14,8 +13,8 @@
 			<h2>Subtitel van twitteren</h2>
 		</header>
 		
-		<header class="full image">
-			<img src="images/magazine-1/Voss01.jpg" alt=""/>
+		<header class="full image" style="background-image: url(images/magazine-1/Voss01.jpg)">
+			
 			<h1>1-Twitteren voor je werk</h1>
 			<h2>Subtitel van twitteren</h2>
 		</header>
@@ -88,5 +87,5 @@
 				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
 			</section>
 		</section>
-	<div>
+	</div>
 </article>
