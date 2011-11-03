@@ -150,7 +150,9 @@ var eZine =  {
 							var a = $(this);
 							i++;
 							var text = a.find('h2').length ? a.find('h2').text() : a.text();
-							ol.append('<li class="'+a.closest('li').attr('class')+' '+(a.attr('href')==currentHref?'current':'')+'"><a href="'+a.attr('href')+'">'+i+' <em><span>'+text+'</span></em><span/></a></li>'); 
+							var link = a[0].href.replace(document.location.protocol+'//'+document.location.host,'');
+							
+							ol.append('<li class="'+a.closest('li').attr('class')+' '+(link==currentHref?'current':'')+'"><a href="'+a.attr('href')+'">'+i+' <em><span>'+text+'</span></em><span/></a></li>'); 
 						});
 						 
 						ol.find('li.current').prev().addClass('prev');
@@ -167,6 +169,7 @@ var eZine =  {
 							}
 							
 						});
+						
 						$('<nav class="prev-next"/>').append(ol).append('<p>/'+i+'</p>').append(ul).appendTo('#document');
 						
 						if (!ol.find('.prev').length) {

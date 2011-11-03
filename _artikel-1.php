@@ -2,7 +2,7 @@
 <article class="layout-1 color-1">
 	<div>
 		<header>
-			<img src="/mag/images/magazine-1/twitter.png" alt=""/>
+			<img src="images/magazine-1/twitter.png" alt=""/>
 			<h1>1-Twitteren voor je werk</h1>
 		</header>
 		<header>

@@ -2,7 +2,7 @@
 <article class="layout-2 color-4">
 	<div>
 		<header>
-			<img src="/mag/images/magazine-1/twitter.png" alt=""/>
+			<img src="images/magazine-1/twitter.png" alt=""/>
 			<h1>7-AgNL onderdeel van DG Uitvoering</h1>
 		</header>
 		

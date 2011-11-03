@@ -2,7 +2,7 @@
 <article class="layout-1 color-5">
 	<div>
 		<header>
-			<img src="/mag/images/magazine-1/twitter.png" alt=""/>
+			<img src="images/magazine-1/twitter.png" alt=""/>
 			<h1>5-AgNL ontkrokodilliseert</h1>
 		</header>
 		

@@ -2,7 +2,7 @@
 <article class="layout-1 color-2">
 	<div>
 		<header>
-			<img src="/mag/images/magazine-1/twitter.png" alt=""/>
+			<img src="images/magazine-1/twitter.png" alt=""/>
 			<h1>6-Vergaderen zonder reizen</h1>
 		</header>
 		

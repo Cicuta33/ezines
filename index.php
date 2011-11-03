@@ -1,5 +1,5 @@
 <?php
-$url = explode('/mag/',$_SERVER['REQUEST_URI']);  ?>
+$url = explode('/ezines/',$_SERVER['REQUEST_URI']);  ?>
 <!doctype html>
 <!--[if lt IE 7]>		<html class="no-js ie ie6" lang="en">	<![endif]-->
 <!--[if IE 7]>			<html class="no-js ie ie7" lang="en">	<![endif]-->
@@ -31,20 +31,20 @@ $url = explode('/mag/',$_SERVER['REQUEST_URI']);  ?>
 
 	<!-- Universal CSS for IE6 (http://code.google.com/p/universal-ie6-css/) -->
 	<!--[if ! lte IE 6]><!-->
-	    <link class="base-css" rel="stylesheet" href="stylesheets/css/base.css" media="screen, handheld"/>
-	    <link rel="stylesheet" href="stylesheets/css/mobile.css" media="only screen and (max-width: 720px)"/>
-	    <link class="desktop-css" rel="stylesheet" href="stylesheets/css/desktop.css" media="only screen and (min-width: 720px)"/>
-	    <link class="templates-css" rel="stylesheet" href="stylesheets/css/templates.css" media="only screen"/>
+	    <link class="base-css" rel="stylesheet" href="assets/stylesheets/css/base.css" media="screen, handheld"/>
+	    <link rel="stylesheet" href="assets/stylesheets/css/mobile.css" media="only screen and (max-width: 720px)"/>
+	    <link class="desktop-css" rel="stylesheet" href="assets/stylesheets/css/desktop.css" media="only screen and (min-width: 720px)"/>
+	    <link class="templates-css" rel="stylesheet" href="assets/stylesheets/css/templates.css" media="only screen"/>
 	    <!--[if (lt IE 9)&(!IEMobile)]><link rel="stylesheet" href="stylesheets/css/desktop.css" media="all"/><![endif]-->
 	<!--<![endif]-->
 	<!--[if lte IE 6]><link rel="stylesheet" href="stylesheets/ie6/ie6.1.1.css" media="screen"/><![endif]-->
 
 	<!-- All Javascript at the bottom, except for Modernizr (enables HTML5 elements and feature detects) (http://www.modernizr.com) plus Selectivzr (enables CSS3 selectors for IE) (http://selectivizr.com) -->
-	<script src="javascript/libs/modernizr-2.0.6.min.js"></script>
+	<script src="assets/javascript/libs/modernizr-2.0.6.min.js"></script>
 
 	<!-- Google Webfont Loader (see also dealing wiht FOUT: http://www.html5rocks.com/tutorials/webfonts/quick/#toc-fout) -->
-	<script src="javascript/libs/webfont.js"></script>
-	<script>WebFont.load({custom:{families:["RijksoverheidSansHeading-Bold","RijksoverheidSansText-Regular","RijksoverheidSerif-Regular","RijksoverheidSerif-Italic"],urls:["/assets/type/rijksoverheidsansheading-bold/rijksoverheidsansheading-bold.css","/assets/type/rijksoverheidsanstext-regular/rijksoverheidsanstext-regular.css","/assets/type/rijksoverheidserif-regular/rijksoverheidserif-regular.css","/assets/type/rijksoverheidserif-italic/rijksoverheidserif-italic.css"]}});</script>
+	<script src="assets/javascript/libs/webfont.js"></script>
+	<script>WebFont.load({custom:{families:["RijksoverheidSansHeading-Bold","RijksoverheidSansText-Regular","RijksoverheidSerif-Regular","RijksoverheidSerif-Italic"],urls:["assets/type/rijksoverheidsansheading-bold/rijksoverheidsansheading-bold.css","assets/type/rijksoverheidsanstext-regular/rijksoverheidsanstext-regular.css","assets/type/rijksoverheidserif-regular/rijksoverheidserif-regular.css","assets/type/rijksoverheidserif-italic/rijksoverheidserif-italic.css"]}});</script>
 
 </head>
 <body>
@@ -54,10 +54,10 @@ $url = explode('/mag/',$_SERVER['REQUEST_URI']);  ?>
 
 			<nav role="navigation">
 				<ul>
-					<li class="home"><a href="/mag/">home</a></li>
-					<li class="toc"><a href="/mag/toc">index</a></li>
-					<li class="settings"><a href="/mag/settings">settings</a></li>
-					<li class="export"><a href="/mag/export">export</a></li>
+					<li class="home"><a href=".">home</a></li>
+					<li class="toc"><a href="toc">index</a></li>
+					<li class="settings"><a href="settings">settings</a></li>
+					<li class="export"><a href="export">export</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -69,11 +69,10 @@ $url = explode('/mag/',$_SERVER['REQUEST_URI']);  ?>
 
 	<!-- Javascript at the bottom for fast page loading -->
 
-
-	<script src="javascript/libs/jquery-1.6.4.min.js"> </script>
-	<script src="javascript/libs/swipe.js"> </script>
-	<script src="javascript/plugins.js"> </script>
-	<script src="javascript/script.js"> </script>
+	<script src="assets/javascript/libs/jquery-1.6.4.min.js"> </script>
+	<script src="assets/javascript/libs/swipe.js"> </script>
+	<script src="assets/javascript/plugins.js"> </script>
+	<script src="assets/javascript/script.js"> </script>
 
 
 

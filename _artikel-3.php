@@ -2,7 +2,7 @@
 <article class="layout-1 color-3">
 	<div>
 		<header>
-			<img src="/mag/images/magazine-1/twitter.png" alt=""/>
+			<img src="images/magazine-1/twitter.png" alt=""/>
 			<h1>3-Successvolle ondernemers&shy;campagne</h1>
 		</header>
 		
