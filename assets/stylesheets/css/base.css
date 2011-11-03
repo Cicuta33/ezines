@@ -409,6 +409,7 @@ h6 {
 }
 blockquote {
   font-family: "RijksoverheidSerif-Italic", Arial, sans-serif;
+  font-style: italic;
 }
 /*	==========================================================================================
 	Webfont loader
@@ -941,8 +942,6 @@ section.toc ol li a p {
 }
 .swipable #document {
   height: auto;
-  overflow: visible !important;
-  overflow-x: hidden !important;
 }
 .swipable #document h1.logo {
   display: none;

@@ -125,6 +125,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 blockquote {
 	font-family: "RijksoverheidSerif-Italic", Arial, sans-serif;
+	font-style: italic;
 }
 
 /*	==========================================================================================
@@ -628,8 +629,7 @@ article {
 		#document {
 			
 			height: auto;	
-			overflow: visible !important;
-			overflow-x: hidden !important;
+			
 			h1.logo {
 				display: none;
 			}
@@ -638,15 +638,6 @@ article {
 			position: relative;
 			background-color: @offWhite;
 			display: table-cell;
-			
-			> div {
-				//opacity: 0;
-				//-webkit-transition: all .3s;
-				
-			}
-			&.done > div {
-				//opacity: 1;
-			}
 						
 		}
 		#container {

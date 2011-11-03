@@ -240,11 +240,11 @@ var eZine =  {
 			isNavigator: true,
 			callback: function(e,index){
 				
-				if (this.callBackable) {
 				
-					this.callBackable = null;
+				
+					
 					eZine.renderArticle(index, true);
-				}
+				
 			}
 			
 		});
@@ -338,7 +338,6 @@ var eZine =  {
 					});
 					if (eZine.swiper) {
 						$('html,body').scrollTop(eZine.swiper.slides[index].scrollPos?eZine.swiper.slides[index].scrollPos:0);
-						//eZine.swiper.element.style.height = eZine.swiper.slides[index].offsetHeight + 'px';
 					}
 			    	
 			    	if (typeof window.history.pushState == 'function') {
@@ -348,17 +347,12 @@ var eZine =  {
 					}
 			    	
 			    	
-			    	
-			    	article.addClass('done');
-			    	
-					
-				
 				
 				
 			} 
 			else {
 
-				article.removeClass('done').html('');
+				article.html('');
 			}
 		});
 		

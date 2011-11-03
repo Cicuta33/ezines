@@ -116,11 +116,8 @@ Swipe.prototype = {
     
     if (!sameSlide && this.isNavigator) {
     	
-		this.callBackable = true;
-		if (force) {
-			this.callback(null, index, this.slides[index]);
-		}
-    	
+		
+		this.callback(null, index, this.slides[index]);
 
     	
     }
@@ -188,7 +185,7 @@ Swipe.prototype = {
   
   transitionEnd: function(e) {
     if (this.delay) this.start();
-    this.callback(e, this.index, this.slides[this.index]);
+    //this.callback(e, this.index, this.slides[this.index]);
 
   },
 
