@@ -1,7 +1,5 @@
-
 <article class="layout-1 color-4">
 	<div>
-		
 		<section>
 			<h1>2-AgNL onderdeel van DG Uitvoering</h1>
 			<section>
@@ -24,7 +22,7 @@
 						<param name="movie" value="http://www.youtube.com/v/YE7VzlLtp-4" />
 						<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAApJREFUCJljYAAAAAIAAfRxZKYAAAAASUVORK5CYII=' width="640" height="360" alt="geen video"
 						title="uw browser ondersteunt geen video" />
-
+	
 					</object>
 				</video>	
 			</figure>

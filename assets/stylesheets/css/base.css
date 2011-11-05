@@ -504,10 +504,10 @@ li p {
   z-index: 4;
   left: 50%;
   top: -44px;
-  width: 209px;
-  margin-left: -104px;
-  height: 130px;
-  background: url(img/ro-logo.png);
+  width: 210px;
+  margin-left: -105px;
+  height: 75px;
+  background: url(img/rijksoverheid-logo.png);
   text-indent: -1234em;
 }
 #document > header {
@@ -565,72 +565,82 @@ li p {
 #document > header nav > ul > li.settings a {
   background-position: -145px 13px;
 }
-#document.home header h1 {
-  display: block;
-}
 .article-0 {
   background: transparent no-repeat 50% 0;
 }
-.article-0 > div:first-child {
-  padding: 32px;
-}
-.article-0 > div:first-child > div h1 {
-  padding-top: 132px;
+.article-0 h1 {
+  padding-top: 77px;
   font-size: 3em;
 }
-.article-0 > div:first-child > div h2 {
+.article-0 h2 {
   margin: 0;
 }
-.article-0 > div:first-child header {
+.article-0 header {
   margin-bottom: 1.6em;
 }
-.article-0 > div:first-child h1 {
+.article-0 h1 {
   font-size: 3.65em;
   line-height: 0.9;
 }
-.article-0 > div:first-child dl {
+.article-0 dl {
   font-size: 1.20em;
   line-height: .7;
   margin: 0.8em 0 0 0;
 }
-.article-0 > div:first-child dl dd + dt {
+.article-0 dl dd + dt {
   border-left: 1.5px solid #fff;
   padding-left: 0.3em;
 }
-.article-0 > div:first-child dl .publication-date {
+.article-0 dl .publication-date {
   text-indent: -1234em;
   margin-right: 0;
 }
-.article-0 > div:first-child dl > * {
+.article-0 dl > * {
   float: left;
   margin: 0 0.3em 0 0;
   color: #fff;
 }
-.article-0 > div:first-child nav {
+.article-0 nav {
   clear: both;
 }
-.article-0 > div:first-child nav h2 {
+.article-0 nav h2 {
   font-size: 1.5em;
   line-height: 1.2;
   margin: 0;
   color: #fff;
 }
-.article-0 > div:first-child nav p {
+.article-0 nav p {
   margin: 0;
   font-size: 1.2em;
   line-height: 1.1;
   color: #fff;
 }
-.article-0 > div:first-child nav li {
+.article-0 nav li {
   margin-top: 1em;
 }
 article {
+  background: url(img/grid.png) repeat-y 50% 0;
   font-size: 115%;
   line-height: 1.5em;
 }
-article > div:first-child {
-  padding: 24px;
-  overflow: hidden;
+article > div {
+  margin: 24px;
+  zoom: 1;
+  zoom: 1;
+}
+article > div:before, article > div:after {
+  display: table;
+  content: "";
+}
+article > div:after {
+  clear: both;
+}
+article > div:before, article > div:after {
+  display: table;
+  content: "";
+}
+article > div:after {
+  clear: both;
 }
 article p {
   font-size: 1em;
@@ -686,6 +696,9 @@ article figure video {
 }
 article figure figcaption {
   font-size: 0.8em;
+}
+article.toc {
+  background-color: #fafafa;
 }
 nav.dynamic-toc {
   display: none;
@@ -937,29 +950,197 @@ section.toc ol li a p {
   margin: 0;
   color: #4e4e4e;
 }
-.swipable #pages {
-  display: none;
-}
-.swipable #document {
+html.touch #document {
   height: auto;
+  margin: 0;
+  min-width: none;
 }
-.swipable #document h1.logo {
+html.touch #document h1.logo {
   display: none;
 }
-.swipable article {
-  position: relative;
-  background-color: #fafafa;
-  display: table-cell;
+html.touch #document > header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 4;
 }
-.swipable #container .article-0 h1 {
+html.touch #document > header nav {
+  -webkit-transition: top 0.1s ease-in-out;
+  -moz-transition: top 0.1s ease-in-out;
+  -ms-transition: top 0.1s ease-in-out;
+  -o-transition: top 0.1s ease-in-out;
+  transition: top 0.1s ease-in-out;
+  -webkit-transition: top 0.1s ease-in-out;
+  -moz-transition: top 0.1s ease-in-out;
+  -ms-transition: top 0.1s ease-in-out;
+  -o-transition: top 0.1s ease-in-out;
+  transition: top 0.1s ease-in-out;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  background-color: #2d2d2d;
+  top: -44px;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+html.touch #document > header nav > ul > li.home a {
+  background-position: 15px -85px;
+}
+html.touch #document > header nav > ul > li.toc a {
+  background-position: -30px -85px;
+  width: 34px;
+}
+html.touch #document > header nav > ul > li.export a {
+  background-position: -100px -85px;
+}
+html.touch #document > header nav > ul > li.settings a {
+  background-position: -144px -85px;
+}
+html.touch #document article {
+  background-image: none;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+html.touch #document article.article-0 > div {
+  padding: 0;
+}
+html.touch #document article.article-0 h1 {
   position: relative;
   z-index: 2;
-  margin-top: -44px;
+  margin-top: -24px;
   margin-left: -53px;
-  padding-top: 156px;
+  padding-top: 101px;
   padding-left: 53px;
-  background: url(img/ro-logo.png) no-repeat -83px 0;
+  background: url(img/rijksoverheid-logo.png) no-repeat -84px 0;
 }
-.swipable #container .article-0 > div {
+html.touch #pages {
+  -webkit-transition: margin 0.1s ease-in-out;
+  -moz-transition: margin 0.1s ease-in-out;
+  -ms-transition: margin 0.1s ease-in-out;
+  -o-transition: margin 0.1s ease-in-out;
+  transition: margin 0.1s ease-in-out;
+  -webkit-transition: margin 0.1s ease-in-out;
+  -moz-transition: margin 0.1s ease-in-out;
+  -ms-transition: margin 0.1s ease-in-out;
+  -o-transition: margin 0.1s ease-in-out;
+  transition: margin 0.1s ease-in-out;
+  position: absolute;
+  top: -10000px;
+  z-index: 4;
+  left: 0;
+  right: 0;
+  min-height: 32px;
+  margin: 0;
+  background-color: #2d2d2d;
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+  width: 100%;
+  overflow: auto;
+}
+html.touch #pages ol.indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+html.touch #pages ol.indicator li {
+  float: left;
+}
+html.touch #pages ol.indicator li a {
+  height: 11px;
+  text-indent: -1234em;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: 10px 5px 11px 0;
+  background: #666666 url(img/nav.png) 50% -130px;
+}
+html.touch #pages ol.indicator li a > * {
+  display: none;
+}
+html.touch #pages ol.indicator li:first-child a {
+  margin-left: 5px;
+}
+html.touch #pages ol.indicator li.current a {
+  background-color: #fff;
+}
+html.touch .open-index #pages {
+  height: 120px;
+}
+html.touch .open-index #pages ol.indicator li {
+  width: 210px !important;
+}
+html.touch .open-index #pages ol.indicator li a {
+  margin-right: 10px;
+  height: 99px;
   position: relative;
+  text-indent: -1234em;
+}
+html.touch .open-index #pages ol.indicator li a em {
+  position: absolute;
+  color: #154273;
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  right: 10px;
+  text-indent: 0;
+  font-style: normal;
+  display: inline;
+  z-index: 4;
+}
+html.touch .open-index #pages ol.indicator li:first-child a {
+  margin-left: 10px;
+}
+html.touch .open-index #pages ol.indicator li.home a, html.touch .open-index #pages ol.indicator li.toc a {
+  background-color: #fff;
+}
+html.touch .open-index #pages ol.indicator li.current a {
+  background-color: #fff;
+  background-position: 50% 100%;
+}
+html.touch .open-menu #document > header {
+  top: -10000px;
+}
+html.touch .open-menu #document > header > nav {
+  top: 0;
+}
+html.touch .open-menu #pages {
+  margin-top: -32px;
+}
+html.touch .open-index #pages {
+  margin-top: -120px;
+}
+html.touch .home #document > header {
+  top: 0 !important;
+}
+html.touch .home #document > header > nav {
+  top: 0;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  background-color: transparent;
 }

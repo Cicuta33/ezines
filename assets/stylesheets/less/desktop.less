@@ -83,16 +83,16 @@
 	}
 		
 	.article-0 {
-		 
-		> div:first-child {
-			background-color: transparent;
-	
-			padding: 0;
+
+			position: relative;
+
 			
-			> div {
+			> div > div {
+				position: relative;
+				z-index: 2;
 				width: 50%;
 				float: right;
-				margin: 24px 0;
+				
 				> * {
 					margin-left: 32px;
 					margin-right: 24px;
@@ -100,16 +100,15 @@
 				}
 			}
 			p.image {
-			background-color: #ff3300;
-				float: left;
-				width: 50%;
+				right: 50%;
 				height: 100%;
 				position: absolute;
+				
 				left: 0;
 				top: 0;
 				bottom: 0;
 				overflow: hidden;
-				
+					
 				img {
 					position: absolute;
 					left: 0;
@@ -121,7 +120,7 @@
 			}
 			
 			
-		}
+	
 	}
 	
 	section.toc {
@@ -211,6 +210,9 @@
 			left: -15px;
 			right: -15px;
 		}
+		.article-0 {
+			min-height: 656px;
+		}
 	}	
 	
 
@@ -225,156 +227,31 @@
 	html {
 		background: url(img/ipad-bg.jpg);
 	}
-
-		/* Document */
-	[role="document"] {
-
-	}
-	
 	
 	#document {
-		max-width: 100%;
-		margin: 0;	
-		> header {
-			display: none;
-			position: absolute;
-			left: 0;
-			top: 0;
-			right: 0;
-			nav {
-				.transition(all, 0.3s);
-				
-				background-color: #123552;
-				//.opacity(0);
-				top: 0;
-				left: 0;
-				right: 0;
-				z-index: 4;
-				> ul {
-					> li {
-						&.home { a { background-position: 15px -85px;} }
-						&.toc { a { background-position: -30px -85px; width: 34px;} }
-						&.export { a { background-position: -100px -85px;} }
-						&.settings { a { background-position: -144px -85px;} }
-					}
-				}
-			}
+		
+		max-width: none;
+		margin: 44px 0 0 0;
+		
+		
+		article {
+			display: block;
 		}
+		
+		
+		
 		
 		
 	}
-	.home #document {
-			header {
-				nav {
-					top: 0;
-					background-color: transparent;
-					.opacity(100);
-				}
-			}
-		}
+	
 	
 	nav.prev-next { display: none; }
 	
 	
-	.has-menu {
-		#document header nav { top: 0; .opacity(100); }
-	}
 	
 	
-	#pages {
-		.transition(height, 0.2s);
-		position: absolute;
-		display: none;
-		z-index: 4;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		min-height: 32px;
-		margin: 0;
-		background-color: #123552;
-		.box-shadow(0,0,3px);
-		width: 100%;
-		overflow: auto;	
-		ol.indicator {
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			list-style: none;			
-			margin: 0;
-			padding: 0;
-			
-			li {
-					
-				float: left;
-					
-				a {
-					height: 11px;
-					text-indent: -1234em;
-					display: block;
-					
-					.transition(all, 0.3s);
-					margin: 10px 5px 11px 0;
-					background: #415d75 url(img/nav.png) 50% -130px;
-					> * {
-						display: none;
-						
-					}
-				}
-				&:first-child  {
-					a {
-						margin-left: 5px;
-					}
-				}
-				&.current a {
-					background-color: #fff;
-				}
-			}
-		}
-	}	
-	.open-index #pages {
-			height: 120px;
-			ol.indicator {
-				li {
-					width: 210px !important;
-					a {
-						margin-right: 10px;
-						height: 99px;
-						position: relative;
-						text-indent: -1234em;
-						em {
-							position: absolute;
-							color: #154273;
-							left: 10px;
-							top: 10px;
-							bottom: 10px;
-							right: 10px;
-							text-indent: 0;
-							font-style: normal;
-							display: inline;
-							z-index: 4;
-						}
-					}
-				&:first-child  {
-					a {
-						margin-left: 10px;
-					}
-				}
-				&.home, &.toc {
-					a {
-						background-color: #fff;
-						 
-						
-						
-					}
-				}
-				&.current a {
-					background-color: #fff;
-					background-position: 50% 100%;
-				}
-			}
-		}
-	}
+	
+	
 	
 		
 	
@@ -400,10 +277,7 @@
 			background-position: 44px 0;
 
 		}
-		article > div {
-			padding: 44px;
-			
-		}
+		
 	}
 	
 	
@@ -417,11 +291,7 @@
 	======================================================================================= */
 @media only screen and (device-width: 768px) and (orientation: portrait) {
 
-	#document {
-		article > div {
-			
-		}
-	}
+	
 
 }	/* END @media */
 
@@ -503,7 +373,7 @@
 
 	/* Clearfix for containing floats — Firefox 3.5+, Safari 4+, Chrome, Opera 9+, IE 6+ (http://nicolasgallagher.com/micro-clearfix-hack/) */
 .clearfix,
-header, article > section, article,
+header, article,
 nav ul, nav p,
 [role="document"],
 [role="document"] > footer {

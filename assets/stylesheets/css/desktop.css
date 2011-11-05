@@ -94,23 +94,21 @@
   -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
 }
-.article-0 > div:first-child {
-  background-color: transparent;
-  padding: 0;
+.article-0 {
+  position: relative;
 }
-.article-0 > div:first-child > div {
+.article-0 > div > div {
+  position: relative;
+  z-index: 2;
   width: 50%;
   float: right;
-  margin: 24px 0;
 }
-.article-0 > div:first-child > div > * {
+.article-0 > div > div > * {
   margin-left: 32px;
   margin-right: 24px;
 }
-.article-0 > div:first-child p.image {
-  background-color: #ff3300;
-  float: left;
-  width: 50%;
+.article-0 p.image {
+  right: 50%;
   height: 100%;
   position: absolute;
   left: 0;
@@ -118,7 +116,7 @@
   bottom: 0;
   overflow: hidden;
 }
-.article-0 > div:first-child p.image img {
+.article-0 p.image img {
   position: absolute;
   left: 0;
   top: 0;
@@ -186,6 +184,9 @@ section.toc ol li a {
     left: -15px;
     right: -15px;
   }
+  #document .article-0 {
+    min-height: 656px;
+  }
 }
 /* END @media */
 /*	==========================================================================================
@@ -195,148 +196,15 @@ section.toc ol li a {
   html {
     background: url(img/ipad-bg.jpg);
   }
-  /* Document */
   #document {
-    max-width: 100%;
-    margin: 0;
+    max-width: none;
+    margin: 44px 0 0 0;
   }
-  #document > header {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-  }
-  #document > header nav {
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #123552;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 4;
-  }
-  #document > header nav > ul > li.home a {
-    background-position: 15px -85px;
-  }
-  #document > header nav > ul > li.toc a {
-    background-position: -30px -85px;
-    width: 34px;
-  }
-  #document > header nav > ul > li.export a {
-    background-position: -100px -85px;
-  }
-  #document > header nav > ul > li.settings a {
-    background-position: -144px -85px;
-  }
-  .home #document header nav {
-    top: 0;
-    background-color: transparent;
-    -khtml-opacity: 1;
-    -moz-opacity: 1;
-    opacity: 1;
-    filter: alpha(opacity=100);
+  #document article {
+    display: block;
   }
   nav.prev-next {
     display: none;
-  }
-  .has-menu #document header nav {
-    top: 0;
-    -khtml-opacity: 1;
-    -moz-opacity: 1;
-    opacity: 1;
-    filter: alpha(opacity=100);
-  }
-  #pages {
-    -webkit-transition: height 0.2s ease-in-out;
-    -moz-transition: height 0.2s ease-in-out;
-    -ms-transition: height 0.2s ease-in-out;
-    -o-transition: height 0.2s ease-in-out;
-    transition: height 0.2s ease-in-out;
-    position: absolute;
-    display: none;
-    z-index: 4;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    min-height: 32px;
-    margin: 0;
-    background-color: #123552;
-    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-    width: 100%;
-    overflow: auto;
-  }
-  #pages ol.indicator {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  #pages ol.indicator li {
-    float: left;
-  }
-  #pages ol.indicator li a {
-    height: 11px;
-    text-indent: -1234em;
-    display: block;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    margin: 10px 5px 11px 0;
-    background: #415d75 url(img/nav.png) 50% -130px;
-  }
-  #pages ol.indicator li a > * {
-    display: none;
-  }
-  #pages ol.indicator li:first-child a {
-    margin-left: 5px;
-  }
-  #pages ol.indicator li.current a {
-    background-color: #fff;
-  }
-  .open-index #pages {
-    height: 120px;
-  }
-  .open-index #pages ol.indicator li {
-    width: 210px !important;
-  }
-  .open-index #pages ol.indicator li a {
-    margin-right: 10px;
-    height: 99px;
-    position: relative;
-    text-indent: -1234em;
-  }
-  .open-index #pages ol.indicator li a em {
-    position: absolute;
-    color: #154273;
-    left: 10px;
-    top: 10px;
-    bottom: 10px;
-    right: 10px;
-    text-indent: 0;
-    font-style: normal;
-    display: inline;
-    z-index: 4;
-  }
-  .open-index #pages ol.indicator li:first-child a {
-    margin-left: 10px;
-  }
-  .open-index #pages ol.indicator li.home a, .open-index #pages ol.indicator li.toc a {
-    background-color: #fff;
-  }
-  .open-index #pages ol.indicator li.current a {
-    background-color: #fff;
-    background-position: 50% 100%;
   }
 }
 /* END @media */
@@ -352,9 +220,6 @@ section.toc ol li a {
   }
   #document article {
     background-position: 44px 0;
-  }
-  #document article > div {
-    padding: 44px;
   }
 }
 /* END @media */
@@ -421,7 +286,6 @@ section.toc ol li a {
 /* Clearfix for containing floats — Firefox 3.5+, Safari 4+, Chrome, Opera 9+, IE 6+ (http://nicolasgallagher.com/micro-clearfix-hack/) */
 .clearfix,
 header,
-article > section,
 article,
 nav ul,
 nav p,
@@ -431,7 +295,6 @@ nav p,
 }
 .clearfix:before,
 header:before,
-article > section:before,
 article:before,
 nav ul:before,
 nav p:before,
@@ -439,7 +302,6 @@ nav p:before,
 [role="document"] > footer:before,
 .clearfix:after,
 header:after,
-article > section:after,
 article:after,
 nav ul:after,
 nav p:after,
@@ -450,7 +312,6 @@ nav p:after,
 }
 .clearfix:after,
 header:after,
-article > section:after,
 article:after,
 nav ul:after,
 nav p:after,

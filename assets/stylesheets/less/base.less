@@ -76,10 +76,6 @@ body {
 
 body, select, input, textarea { color: @black; }
 
-header, nav, section, article, figure, aside, footer, [role="document"], [role="main"] {
-	
-}
-
 sub {
     vertical-align: sub;
     font-size: smaller;
@@ -217,12 +213,13 @@ li p { margin-bottom: 0; }
 		z-index: 4;
 		left: 50%;
 		top: -44px;
-		width: 209px;
-		margin-left: -104px;
-		height: 130px;
-		background: url(img/ro-logo.png);
+		width: 210px;
+		margin-left: -105px;
+		height: 75px;
+		background: url(img/rijksoverheid-logo.png);
 		text-indent: -1234em;
 	}
+	
 	> header {
 		position: absolute;
 		left: 0;
@@ -261,26 +258,15 @@ li p { margin-bottom: 0; }
 				}
 			}
 		}
-	}	
-}
-#document.home {
-	header {
-		h1 {
-			display: block;
-		}
 	}
-} 
-.article-0 {
-	background: transparent no-repeat 50% 0;
-	
-	
-	> div:first-child {
+}
 
-		padding: 32px;
-		> div {
-			
+.article-0 {
+		background: transparent no-repeat 50% 0;
+	
+				
 			h1 {
-				padding-top: 132px;
+				padding-top: 77px;
 				font-size: 3em;
 			}	
 			
@@ -288,7 +274,7 @@ li p { margin-bottom: 0; }
 			h2 {
 				margin: 0;
 			}
-		}
+		
 		header {
 			margin-bottom: 1.6em;
 		}
@@ -335,67 +321,70 @@ li p { margin-bottom: 0; }
 				margin-top: 1em;
 			}
 		}
-	}
+	
 }
 
 article {
-		//background: url(img/grid.png) repeat-y 50% 0;
-		font-size: 115%;
-		line-height: 1.5em;
-		> div:first-child {
-			padding: 24px;
-			overflow: hidden;
-		}
-		p {
-			font-size: 1em;
-			margin: 0 0 1.5em 0;
-			&.intro {
-				font-size: 1.3333em; /* 16px */ 
-				line-height: 1.125em; /* 18px */ 
-				margin-bottom: 1.125em; 
-				margin-top: 0em;
-			}
-		}
-		h1, h2, h3 {
-			font-size: 1.1667em; /* 14px */ 
-			line-height: 1.2857em; /* 18px */ 
-			margin-top: 1.2857em; 
-			margin-bottom: 0em;
-		}
-		h1 {
-			font-size: 2em; /* 24px */ 
-			line-height: 1.5em; /* 36px */ 
-			margin-top: 0.75em; 
-		}
-		header h1 {
-			line-height: 1;
-		}
-		h2, h3 {
-			font-size: 1.1667em; /* 14px */ 
-			line-height: 1.2857em; /* 18px */ 
-			margin-top: 1.2857em; 
-			font-weight: normal;
-		}
-		blockquote {
-			font-size: 2em; /* 24px */ 
-			line-height: 1.5em; /* 36px */ 
-			margin-top: 0.75em; 
-			margin-bottom: 0em;
-			p {
-				margin: 0;
-			}
-		}
-		figure {
-			video {
-				width: 100%;
-			}
-			figcaption {
-				font-size: 0.8em;
-			}
-		}
-		
-		
+	
+	> div {
+		margin: 24px;
+		.clearfix();
 	}
+	background: url(img/grid.png) repeat-y 50% 0;
+	font-size: 115%;
+	line-height: 1.5em;
+
+	p {
+		font-size: 1em;
+		margin: 0 0 1.5em 0;
+		&.intro {
+			font-size: 1.3333em; /* 16px */ 
+			line-height: 1.125em; /* 18px */ 
+			margin-bottom: 1.125em; 
+			margin-top: 0em;
+		}
+	}
+	h1, h2, h3 {
+		font-size: 1.1667em; /* 14px */ 
+		line-height: 1.2857em; /* 18px */ 
+		margin-top: 1.2857em; 
+		margin-bottom: 0em;
+	}
+	h1 {
+		font-size: 2em; /* 24px */ 
+		line-height: 1.5em; /* 36px */ 
+		margin-top: 0.75em; 
+	}
+	header h1 {
+		line-height: 1;
+	}
+	h2, h3 {
+		font-size: 1.1667em; /* 14px */ 
+		line-height: 1.2857em; /* 18px */ 
+		margin-top: 1.2857em; 
+		font-weight: normal;
+	}
+	blockquote {
+		font-size: 2em; /* 24px */ 
+		line-height: 1.5em; /* 36px */ 
+		margin-top: 0.75em; 
+		margin-bottom: 0em;
+		p {
+			margin: 0;
+		}
+	}
+	figure {
+		video {
+			width: 100%;
+		}
+		figcaption {
+			font-size: 0.8em;
+		}
+	}
+	&.toc {
+		background-color: @offWhite;
+	}
+}
 
 	nav.dynamic-toc { 
 		display: none;
@@ -592,7 +581,6 @@ article {
 	
 	
 	section.toc {
-		
 		font-size: 1.1em;
 		line-height: 1.2;
 		ol {
@@ -620,44 +608,208 @@ article {
 		}
 	}
 
-	.swipable {
-		
-		#pages {
-			display: none;
-		}
-		
+	html.touch {
 		#document {
-			
+		
 			height: auto;	
-			
+			margin: 0;
+			min-width: none;
 			h1.logo {
 				display: none;
 			}
-		}
-		article {
-			position: relative;
-			background-color: @offWhite;
-			display: table-cell;
-						
-		}
-		#container {
-			
-			.article-0 {
+			> header {
 				
-				h1 {
-					position :relative;
-					z-index: 2;
-					margin-top: -44px;
-					margin-left: -53px;
-					padding-top: 156px;
-					padding-left: 53px;
-					background: url(img/ro-logo.png) no-repeat -83px 0;
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				
+				z-index: 4;
+				nav {
+					.transition(top, 0.1s);
+					.box-shadow(0,0,6px);
+					background-color: #2d2d2d;
+					
+					top: -44px;
+					left: 0;
+					right: 0;
+					z-index: 4;
+					> ul {
+						> li {
+							&.home { a { background-position: 15px -85px;} }
+							&.toc { a { background-position: -30px -85px; width: 34px;} }
+							&.export { a { background-position: -100px -85px;} }
+							&.settings { a { background-position: -144px -85px;} }
+						}
+					}
 				}
-				> div  {
-					position: relative;
+			}
+			
+			
+			article {
+				background-image: none;
+				position: relative;
+				float: left;
+				width: 100%;
+				&.article-0 {
+					> div {
+						padding: 0;
+					}
+					
+					h1 {
+						position :relative;
+						z-index: 2;
+						margin-top: -24px;
+						margin-left: -53px;
+						padding-top: 101px;
+						padding-left: 53px;
+						background: url(img/rijksoverheid-logo.png) no-repeat -84px 0;
+						
+					}
+					
+				}
+				
+			}
+		}
+		
+		
+			
+		
+		
+		#pages {
+		.transition(margin, 0.1s);
+		position: absolute;
+		top: -10000px;	
+		z-index: 4;
+		left: 0;
+		right: 0;
+		min-height: 32px;
+		margin: 0;
+		background-color: #2d2d2d;
+		.box-shadow(0,0,6px);
+		width: 100%;
+		overflow: auto;	
+		ol.indicator {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			list-style: none;			
+			margin: 0;
+			padding: 0;
+			
+			li {
+					
+				float: left;
+					
+				a {
+					height: 11px;
+					text-indent: -1234em;
+					display: block;
+					
+					.transition(all, 0.3s);
+					margin: 10px 5px 11px 0;
+					background: #666 url(img/nav.png) 50% -130px;
+					> * {
+						display: none;
+						
+					}
+				}
+				&:first-child  {
+					a {
+						margin-left: 5px;
+					}
+				}
+				&.current a {
+					background-color: #fff;
 				}
 			}
 		}
+	}	
+	.open-index #pages {
+			height: 120px;
+			
+			ol.indicator {
+				li {
+					width: 210px !important;
+					a {
+						margin-right: 10px;
+						height: 99px;
+						position: relative;
+						text-indent: -1234em;
+						em {
+							position: absolute;
+							color: #154273;
+							left: 10px;
+							top: 10px;
+							bottom: 10px;
+							right: 10px;
+							text-indent: 0;
+							font-style: normal;
+							display: inline;
+							z-index: 4;
+						}
+					}
+				&:first-child  {
+					a {
+						margin-left: 10px;
+					}
+				}
+				&.home, &.toc {
+					a {
+						background-color: #fff;
+						 
+						
+						
+					}
+				}
+				&.current a {
+					background-color: #fff;
+					background-position: 50% 100%;
+				}
+			}
+		}
+	}
+	
+	.open-menu {
+			#document {
+				> header {
+					top: -10000px;
+					 > nav {
+						top: 0;
+					}
+				}
+				
+			}
+			#pages {
+				margin-top: -32px;
+			}
+		}
+		.open-index {
+			
+				#pages {
+					margin-top: -120px;
+			
+				
+				}
+			
+			
+		}
+		.home {
+			#document {
+				> header {
+					top: 0 !important;
+					 > nav {
+						top: 0;
+						.box-shadow(0,0,0);
+						background-color: transparent;
+					}
+				}
+			}
+		}
+		
+		
+		
 	}
 
 

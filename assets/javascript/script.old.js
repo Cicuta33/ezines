@@ -4,11 +4,13 @@
 	Custom, additional javascript and (jQuery) scripts
 */
 var eZine =  {
+	menuVisible: false,
+	menuTriggers: window.Zepto ? 'longTap tap' : null,
 	tocHTML: null,
 	scroller: [],
 	pages: null,
 	articles: [],
-	isTouch: null,
+	isIpad: null,
 	currentIndex: 0,
 	timer: null,
 	articleScroller: null,
@@ -16,13 +18,26 @@ var eZine =  {
 	$body: $('body'),
 	init: function(){
 		
-		// touch check
-		eZine.isTouch = $('html').hasClass('touch');
-	//	eZine.isTouch = true;
+		// ipad check
+		eZine.isIpad = navigator.userAgent.match(/iPad/i) != null;
+		//eZine.isIpad = true;
 		
 		
+	
 		
-		eZine.menuBar = $('#document > header');
+		// touch actions
+		eZine.menuTriggers && $('#document').bind(eZine.menuTriggers, function(e){
+			
+			if (eZine.menuVisible) {
+				eZine.$body.removeClass('has-menu');
+				eZine.menuVisible = false;
+			}
+			else {
+				eZine.$body.addClass('has-menu');
+				eZine.menuVisible = true;
+			}
+			e.preventDefault();
+		});
 		
 		$('header > nav > ul > li > a').click(function(e){
 			var a = $(this);
@@ -31,7 +46,7 @@ var eZine =  {
 			
 			switch(true) {
 			case /toc\b/.test(className):
-				if (eZine.isTouch) {
+				if (eZine.isIpad) {
 					if (eZine.swiper) eZine.swiper.slide(1,200);
 					e.preventDefault();
 				} 
@@ -58,7 +73,7 @@ var eZine =  {
 				}
 				break;
 			case /home\b/.test(className):
-				if (eZine.isTouch && eZine.swiper) {
+				if (eZine.isIpad && eZine.swiper) {
 					eZine.swiper.slide(0,200);
 					e.preventDefault();
 				}
@@ -72,8 +87,24 @@ var eZine =  {
 		// get Table of Contents (toc)
 		eZine.getToc();
 		
-		if (eZine.isTouch) {
-
+		if (eZine.isIpad) {
+			$('body').bind('toggle-menu',function(){
+				clearTimeout(eZine.timer);
+				eZine.timer = setTimeout(function(){
+					clearTimeout(eZine.timer);
+					if ($('body').hasClass('open-index')) {
+						$('body').removeClass('open-index');
+						$('body').removeClass('has-menu');
+						eZine.pages.width('100%');
+						
+					}
+					else {
+						$('body').toggleClass('has-menu');
+					}
+					
+					
+				},550);
+			});
 			$('article.toc .toc li a').live('click',function(e){
 				if (eZine.swiper) {
 					var li = $(this).closest('li');
@@ -119,7 +150,6 @@ var eZine =  {
 							var a = $(this);
 							i++;
 							var text = a.find('h2').length ? a.find('h2').text() : a.text();
-							
 							var link = a[0].href.replace(document.location.protocol+'//'+document.location.host,'');
 							
 							ol.append('<li class="'+a.closest('li').attr('class')+' '+(link==currentHref?'current':'')+'"><a href="'+a.attr('href')+'">'+i+' <em><span>'+text+'</span></em><span/></a></li>'); 
@@ -139,6 +169,7 @@ var eZine =  {
 							}
 							
 						});
+						
 						$('<nav class="prev-next"/>').append(ol).append('<p>/'+i+'</p>').append(ul).appendTo('#document');
 						
 						if (!ol.find('.prev').length) {
@@ -151,7 +182,7 @@ var eZine =  {
 						eZine.pages = ol;
 						
 						// now we have a toc, let's prepare the iscroll
-						if (eZine.isTouch) eZine.prepareArticles();
+						if (eZine.isIpad) eZine.prepareArticles();
 						
 						
 						
@@ -172,10 +203,6 @@ var eZine =  {
 		var container = $('<div id="container"/>');
 		var current = $('#document > article');
 		
-		var width = current.width();
-		current.width(width);
-		
-		
 		var currentToggle = false;
 		
 		container.append(current);
@@ -185,16 +212,11 @@ var eZine =  {
 			li.attr('id','article-'+i).css({width: (100/amount)+'%'}).data('width',(100/amount)+'%');
 			
 			var article = $('<article data-index="'+i+'" class="article-'+i+' '+li.attr('class')+'"></article>');
-			article.width(width);
 			if ($(this).hasClass('current')) {
-				
 				currentToggle = true;
 				eZine.currentIndex = i;
 				current.attr('data-index',i).addClass('current article-'+i);
-				
-				eZine.articles[i] = current[0].innerHTML;
-				current.html('');
-
+				eZine.articles[i] = current.find('>div').clone();
 			}
 			else if (!currentToggle) current.before(article);
 			else if (currentToggle) {
@@ -210,42 +232,11 @@ var eZine =  {
 			container: document.getElementById('container'),
 			selector: '>article',
 			startSlide: eZine.currentIndex,
-			isNavigator: true,
-			callback: function(e,index, slides){
-				
-				
-				
-					var backgroundColor = (index>0 && index<slides.length-1) ? window.getComputedStyle(slides[index],null).getPropertyValue("background-color") : 'transparent';
-					document.body.style.backgroundColor = backgroundColor;
-					eZine.renderArticle(index, true);
-					
-				
-			},
-			doubleTap: function(e){
-				
-				eZine.menuBar.css({top: $(window).scrollTop()});
-				$('#pages').css({top: ($(window).scrollTop()+window.innerHeight)});
-				$('body').addClass('open-menu');
-				
-			    (e)?e.stopPropagation():window.event.cancelBubble = true;
-			},
-			singleTap: function(){
-				eZine.menuBar.css({top: -10000});
-				$('#pages').css({top: -10000}).removeClass('open-toc');
-				$('body').removeClass('open-menu');
-			}
+			isNavigator: true
 			
 		});
-		
-		
+		$('body').removeClass('init');
 		$('body').addClass('swipable');
-		
-		setInterval(function(){
-			if ($('body').hasClass('open-menu')) {
-				eZine.menuBar.css({top: $(window).scrollTop()});
-				$('#pages').css({top: ($(window).scrollTop()+window.innerHeight)});
-			}
-		},10);
 		
 		
 		
@@ -267,20 +258,10 @@ var eZine =  {
 				e.preventDefault();
 			}
 			else {
-				if (eZine.swiper) eZine.swiper.slide($(this).closest('li').index(),200);
-				$('body').removeClass('open-index').removeClass('open-menu');
-				eZine.pages.width('100%');
+				eZine.articleScroller.scrollToPage($(this).closest('li').index(),0,0);
 				e.preventDefault();
 			}
 		});
-		
-		
-		new Swipe(document.getElementById('pages'), {
-			container: eZine.pages[0],
-			selector: '>li'
-		});
-
-		
 		
 		eZine.preloadArticles();
 	},
@@ -291,75 +272,66 @@ var eZine =  {
 		});
 		
 		eZine.pages.find('li:not(.loaded, .current)').each(function(){
-			loadArticle(this);
+			loadArticle(this, true);
 		});
 		
 		
-		function loadArticle(li){
+		function loadArticle(li, stack){
 			li = $(li);
-			
+			var h1;
 			$.ajax({
 				url: li.find('a').attr('href'),
 				
 				async: false,
 				success: function(data){
 					li.addClass('loaded');
-					data = $(data).find('article:first');
+					data = $('<div>'+data+'</div>').find('#document > article:first').find('>div');
 					
 					
-					
-				
-					eZine.articles[li.index()] = data[0].innerHTML;
+					if (!stack) $('article.article-'+li.index()).html(data);
+					eZine.articles[li.index()] = data;
 					
 				}
 			
 			});
 		}
 	},
-	renderArticle: function(index, slided){
+	renderArticle: function(index){
 		
 		
-		if (index==0) $('body').addClass('home');
-		else $('body').removeClass('home');
 		
 		
-		$('#container').css({minHeight: window.innerHeight});
-		 
-		$('#container > article').css({minHeight: window.innerHeight}).each(function(i){
-				var article = $(this);
-				
+		$('#container > article').removeClass('prev next current').each(function(i){
+			if (i>index-2 && i<index+2) {
+
 				if (i==index) {
-					article[0].innerHTML = eZine.articles[i];
 					
-					/*
-					article.find('section.image-slider>figure').each(function(){
+					var article = $(this);
+					setTimeout(function(){
+						
+						article.addClass('current');
+					},1000);
+				}
+				if (!$('>div',this).length) {
+					$(this).html(eZine.articles[i]);
+					$(this).find('figure:has(video)').each(function(){
+						$(this).html($(this).html());
+					});
+					
+					$(this).find('section.image-slider>figure').each(function(){
 						var _this = this;
 						eZine.imageSwiper = new Swipe(_this, {
 							container: $('>ol', _this)[0],
 							selector: '>li'
 						});
 					});
-					*/
-					
-					if (eZine.swiper) {
-						$('html,body').scrollTop(eZine.swiper.slides[index].scrollPos?eZine.swiper.slides[index].scrollPos:0);
-					}
-			    	
-			    	if (typeof window.history.pushState == 'function') {
-						var a = eZine.pages.find('li#article-'+index+' > a');
-						history.pushState({}, a.find('em').text(), a.attr('href'));
-						document.title = a.find('em').text();
-					}
-			    	
-			    	$('#container > article').css({minHeight: Math.max(window.innerHeight,article.height())});
-			    	
-			    	
+				}
 				
 				
 			} 
 			else {
 
-				article.html('');
+				$(this).html('');
 			}
 		});
 		
@@ -368,9 +340,8 @@ var eZine =  {
 
 };
 eZine.init();
-if (false) {
 var currentcss;
-
+/*
 var timer =setInterval(function(){
 	
 	$.ajax({
@@ -382,7 +353,6 @@ var timer =setInterval(function(){
 					currentcss = data;
 					$('.desktop-css').attr('href',$('.desktop-css').attr('href').split('?')[0]+'?'+Math.random());
 					$('.base-css').attr('href',$('.base-css').attr('href').split('?')[0]+'?'+Math.random());
-					$('.template-css').attr('href',$('.templates-css').attr('href').split('?')[0]+'?'+Math.random());
 				}
 				
 			}
@@ -392,7 +362,7 @@ var timer =setInterval(function(){
 	
 	
 },200);
-}
+*/
 
 window.onorientationchange = function() {
 	

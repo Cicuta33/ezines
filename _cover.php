@@ -31,13 +31,8 @@
 						</a>
 					</li>
 					<li>
-						<a href="artikel-5">
+						<a href="artikel-1">
 							<h2>AgNL ontkrokodilliseert</h2>
-						</a>
-					</li>
-					<li>
-						<a href="artikel-6">
-							<h2>Vergaderen zonder reizen</h2>
 						</a>
 					</li> 
 				</ul>

@@ -1,2 +1,2 @@
 <?php
-echo filemtime('stylesheets/css/desktop.css')+filemtime('stylesheets/css/base.css');
+echo filemtime('assets/stylesheets/css/desktop.css')+filemtime('assets/stylesheets/css/base.css');

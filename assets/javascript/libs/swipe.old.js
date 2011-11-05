@@ -20,9 +20,7 @@ window.Swipe = function(element, options) {
   this.delay = this.options.auto || 0;
   this.callback = this.options.callback || function(){};
   this.isNavigator = this.options.isNavigator || false;
-  this.doubleTap = this.options.doubleTap || function(){};
-  this.singleTap = this.options.singleTap || function(){};
- 
+
   // reference dom elements
   this.container = element;
   this.element = this.options.container;
@@ -67,7 +65,6 @@ Swipe.prototype = {
 
     // determine width of each slide
     this.width = this.container.getBoundingClientRect().width;
-    
 
 
     // dynamic css
@@ -76,7 +73,6 @@ Swipe.prototype = {
     while (index--) {
       var el = this.slides[index];
       el.style.width = this.width + 'px';
-      
     }
 
     // set start position and force translate to remove initial flickering
@@ -97,11 +93,10 @@ Swipe.prototype = {
     var sameSlide = ((index == this.getPos()) && !force);
     	
     
-	    
-    
+
     // set duration speed (0 represents 1-to-1 scrolling)
     style.webkitTransitionDuration = style.MozTransitionDuration = style.msTransitionDuration = style.OTransitionDuration = style.transitionDuration = duration + 'ms';
-    
+
     // translate to given index position
     style.webkitTransform = 'translate3d(' + -(index * this.width) + 'px,0,0)';
     style.msTransform = style.MozTransform = style.OTransform = 'translateX(' + -(index * this.width) + 'px)';
@@ -115,9 +110,24 @@ Swipe.prototype = {
     
     if (!sameSlide && this.isNavigator) {
     	
-		
-		this.callback(null, index, this.slides);
-
+    	var backgroundColor = (index>0 && index<this.slides.length-1) ? window.getComputedStyle(this.slides[index],null).getPropertyValue("background-color") : 'transparent';
+	    document.body.style.backgroundColor = backgroundColor;
+    	if (this.options.animated) {
+    		$('html,body').stop().animate({scrollTop: this.slides[index].scrollPos?this.slides[index].scrollPos:0},this.options.animated,'swing',function(){
+    			eZine.renderArticle(index);
+    		});
+    	}
+    	else {
+    		$('html,body').scrollTop(this.slides[index].scrollPos?this.slides[index].scrollPos:0);
+    		_this.element.style.height = _this.slides[index].offsetHeight + 'px';
+    		eZine.renderArticle(index);
+    	}
+    	
+    	if (typeof window.history.pushState == 'function') {
+			var a = eZine.pages.find('li#article-'+index+' > a');
+			history.pushState({}, a.find('em').text(), a.attr('href'));
+			document.title = a.find('em').text();
+		}
     	
     }
     
@@ -179,12 +189,15 @@ Swipe.prototype = {
   },
 
   scroll: function(){
+	  //console.log(window.pageYOffset);
 	  this.slides[this.getPos()].scrollPos = window.pageYOffset;
   },
   
   transitionEnd: function(e) {
+    
     if (this.delay) this.start();
-    //this.callback(e, this.index, this.slides[this.index]);
+    
+    this.callback(e, this.index, this.slides[this.index]);
 
   },
 
@@ -192,8 +205,6 @@ Swipe.prototype = {
 
     // cancel slideshow
     clearTimeout(this.interval);
-    
-    if (typeof this.singleTap == 'function') this.singleTap(e);
     
     this.start = {
 
@@ -256,25 +267,7 @@ Swipe.prototype = {
   },
 
   onTouchEnd: function(e) {
-	  var target = e.target;
-	  
-	 // check if we are doing a double tab
-	  var now = new Date().getTime();
-      
-      var lastTouch = target.lastTouch || now+1;
-      var delta = now - lastTouch;
-      clearTimeout(target.actionTimeout);
-      if(delta<500 && delta>0) {
-   	   //toubletab
-   	   target.lastTouch = null;
-   	   
-   	   
-   	   if (typeof this.doubleTap == 'function') this.doubleTap(e); 
-      }
-      else {
-    	  target.lastTouch = now;
-      }
-	  
+
     // determine if slide attempt triggers next/prev slide
     var isValidSlide = 
           Number(new Date()) - this.start.time < 250      // if slide duration is less than 250ms
