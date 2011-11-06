@@ -18,6 +18,7 @@ window.Swipe = function(element, options) {
   this.index = this.options.startSlide || 0;
   this.speed = this.options.speed || 300; 
   this.delay = this.options.auto || 0;
+  this.disableSnap = this.options.disableSnap || false;
   this.callback = this.options.callback || function(){};
   this.isNavigator = this.options.isNavigator || false;
   this.doubleTap = this.options.doubleTap || function(){};
@@ -45,7 +46,11 @@ window.Swipe = function(element, options) {
   this.element.addEventListener('msTransitionEnd', this, false);
   this.element.addEventListener('oTransitionEnd', this, false);
   this.element.addEventListener('transitionend', this, false);
-  window.addEventListener('resize', this, false);
+  window.addEventListener('resize', function(){
+	  if (_this.prevWidth != window.innerWidth) {
+		  _this.setup();
+	  }
+  });
   window.addEventListener('scroll', this, false);
 
 }
@@ -53,7 +58,10 @@ window.Swipe = function(element, options) {
 Swipe.prototype = {
 
   setup: function() {
-
+	// check for real window resize
+	this.prevWidth = window.innerWidth;
+	
+	
     // get and measure amt of slides
     this.slides = $(this.element).find(this.options.selector);
     
@@ -68,14 +76,19 @@ Swipe.prototype = {
     // determine width of each slide
     this.width = this.container.getBoundingClientRect().width;
     
+    
 
-
+    
     // dynamic css
-    this.element.style.width = (this.slides.length * this.width) + 'px';
+    this.totalWidth = (this.slides.length * this.width);
+    this.element.style.width = this.totalWidth + 'px';
+    //console.log((this.slides.length * this.width));
     var index = this.slides.length;
     while (index--) {
       var el = this.slides[index];
-      el.style.width = this.width + 'px';
+      if (!this.options.elementWidth) {
+    	  el.style.width = this.width + 'px';
+      }
       
     }
 
@@ -103,8 +116,21 @@ Swipe.prototype = {
     style.webkitTransitionDuration = style.MozTransitionDuration = style.msTransitionDuration = style.OTransitionDuration = style.transitionDuration = duration + 'ms';
     
     // translate to given index position
-    style.webkitTransform = 'translate3d(' + -(index * this.width) + 'px,0,0)';
-    style.msTransform = style.MozTransform = style.OTransform = 'translateX(' + -(index * this.width) + 'px)';
+    var newPos = (index * this.width);
+    
+    if (this.options.elementWidth) {
+    	var max = ((this.options.elementWidth*this.length)-this.width);
+    	if (newPos>max) {
+    		newPos = max;
+    		index = Math.ceil(newPos/this.width);
+    	}
+    	
+    }
+    
+    
+    
+    style.webkitTransform = 'translate3d(' + -newPos + 'px,0,0)';
+    style.msTransform = style.MozTransform = style.OTransform = 'translateX(' + -newPos + 'px)';
     
     // set new index to allow for expression arguments
     this.index = index;
@@ -123,7 +149,18 @@ Swipe.prototype = {
     
 
   },
-  
+  reset: function(){
+	  this.index = 0;
+	  var style = this.element.style
+	  style.webkitTransform = 'translate3d(' + 0 + 'px,0,0)';
+	  style.msTransform = style.MozTransform = style.OTransform = 'translateX(' + 0 + 'px)';  
+  },
+  lock: function(){
+	  this.locked = true;
+  },
+  unlock: function(){
+	  this.locked = false;
+  },
   getPos: function() {
     
     // return current index position
@@ -165,6 +202,7 @@ Swipe.prototype = {
   
   },
   handleEvent: function(e) {
+	  
     switch (e.type) {
       case 'touchstart': this.onTouchStart(e); break;
       case 'touchmove': this.onTouchMove(e); break;
@@ -173,7 +211,6 @@ Swipe.prototype = {
       case 'msTransitionEnd':
       case 'oTransitionEnd':
       case 'transitionend': this.transitionEnd(e); break;
-      case 'resize': this.setup(); break;
       case 'scroll': this.scroll(); break;
     }
   },
@@ -192,6 +229,8 @@ Swipe.prototype = {
 
     // cancel slideshow
     clearTimeout(this.interval);
+    
+    if (this.locked) return;
     
     if (typeof this.singleTap == 'function') this.singleTap(e);
     
@@ -222,6 +261,8 @@ Swipe.prototype = {
 
   onTouchMove: function(e) {
 
+	if (this.locked) return;
+	  
     this.deltaX = e.touches[0].pageX - this.start.pageX;
 
     // determine if scrolling test has run - one time test
@@ -248,7 +289,16 @@ Swipe.prototype = {
       // translate immediately 1-to-1
       
       
-      this.element.style.webkitTransform = 'translate3d(' + (this.deltaX - this.index * this.width) + 'px,0,0)';
+      var newPos = (this.index * this.width);
+      
+      if (this.options.elementWidth) {
+      	var max = ((this.options.elementWidth*this.length)-this.width);
+      	if (newPos>max) {
+      		newPos = max;
+      	}
+      }
+      
+      this.element.style.webkitTransform = 'translate3d(' + (this.deltaX - newPos) + 'px,0,0)';
 
     }
     (e)?e.stopPropagation():window.event.cancelBubble = true;
@@ -256,6 +306,10 @@ Swipe.prototype = {
   },
 
   onTouchEnd: function(e) {
+	  
+	  if (this.locked) return;
+	  
+	  
 	  var target = e.target;
 	  
 	 // check if we are doing a double tab
@@ -275,6 +329,10 @@ Swipe.prototype = {
     	  target.lastTouch = now;
       }
 	  
+      
+    // if snapping is off, ignore
+     
+      
     // determine if slide attempt triggers next/prev slide
     var isValidSlide = 
           Number(new Date()) - this.start.time < 250      // if slide duration is less than 250ms
