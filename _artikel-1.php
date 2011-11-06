@@ -1,91 +1,78 @@
 <article class="layout-1 color-1">
 	<div>
-		<header>
-			<img src="images/magazine-1/twitter.png" alt=""/>
-			<h1>1-Twitteren voor je werk</h1>
-		</header>
-		<header>
-			<h1>1-Twitteren voor je werk</h1>
-			<h2>Subtitel van twitteren</h2>
-		</header>
-		<header class="full">
-			<h1 class="full">1-Twitteren voor je werk</h1>
-			<h2>Subtitel van twitteren</h2>
-		</header>
-		
 		<header class="full image" style="background-image: url(images/magazine-1/Voss01.jpg)">
 			
-			<h1>1-Twitteren voor je werk</h1>
-			<h2>Subtitel van twitteren</h2>
+			<h1>Moderatoren gaan samen bruisen</h1>
+			<h2>Creatief, meedenkend, scherpe vragen, goed timemanagement</h2>
 		</header>
 		
 		
 		<section class="intro">
 			<section>
-				<p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur porta feugiat ullamcorper. Integer lacinia mi id odio faucibus eget tincidunt nisl iaculis.</p>
+				<p class="intro">Het BRUIS-team van de EVD en de moderatoren van SenterNovem: ooit aparte teams met overlap in werkzaamheden, nu een groep die samen heel de organisatie ondersteunt bij workshops, strategie-sessies en evenementen.</p>
+				<p>Het afgelopen jaar voerden de teams hun werkzaamheden apart uit, sinds begin dit jaar is er samenwerking in de vorm van 1 kernteam met 18 moderatoren. De kernteamleden besteden hier op jaarbasis minimaal 250 uur aan, inclusief 80 uur opleiding/overleg, naast hun reguliere werk. Daarnaast is er een groep die een kleiner aantal uren inzetbaar is. Peter Kors en Bart Krull, namens het BRUIS- team aangesloten bij het kernteam, vertellen er meer over, samen met moderator Jan Peter Oelen.</p>
 			</section>
 			<aside>
-				<h2>Twitteren zonder handen</h2>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
+				<p>
+				<q>
+						&#8220;We hadden een ambitieuze vraag voor een beperkt tijdsframe, en daar pasten de werkvormen prima bij&#8221;
+				</q>
+				</p>
 			</aside>
 		</section>
 		<section>
 			<section>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<blockquote>
-					<p>De wereld waarin en waarvoor we werken zal altijd dynamisch blijven.</p>
-				</blockquote>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
+				<h2>Brainstorms en programmavoorstellen</h2>
+				<p>Het BRUIS-team bestaat sinds 2005 en richtte zich vooral op creatieve brainstormsessies om ideeeen op te doen, om te 'bubbelen en bruisen'. Een echt team, dat groeide van 3 naar 10 personen, maar slechts een beperkt aantal uren inzetbaar was. We begeleidden 20 a 30 sessies per jaar.</p>
+				<p>Op basis van de wensen van de klant zijn de taken uitgebreid. Bijvoorbeeld met het begeleiden van teambuilding en samenwerking of het faciliteren van strategische bijeenkomsten zoals heisessies,
+via een gespreksleider.</p>	
+			</section>
+		</section>
+		<section>
+			<figure class="left">
+					<img src="images/magazine-1/content-img2.jpg" alt=""/>
+					<figcaption>
+						Bijeenkomst met een moderator
+					</figcaption>
+				
+			</figure>
+			<section>
+				<p>Het moderatorenteam bestaat uit een verzameling experts en is ontstaan in de Novem-tijd. We zijn betrokken bij 300 sessies per jaar. Destijds waren we vooral toegerust om het primaire proces te ondersteunen bij het schrijven van goed doortimmerde programma- voorstellen. Om dat scherper te krijgen is een standaard methodiek ontwikkeld: P3N, Programmeren op 3 Niveaus. Gaandeweg kregen we daarnaast ook steeds meer aan- vragen voor de inhoudelijke begeleiding van andere (groeps) processen. Onze moderatoren zijn daarom verder opgeleid op het gebied van brainstormen, kennismanagement en teamsessies. Want het is echt een vak om een sessie goed te begeleiden.</p>
 			</section>
 		</section>
 		<section>
 			<section>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<blockquote class="right">
-					<p>De wereld waarin en waarvoor we werken zal altijd dynamisch blijven.</p>
-				</blockquote>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-			</section>	
-		</section>
-		<section>
-			<aside>
-				<h3>Twitteren zonder handen</h3>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-			</aside>
-			<section>
-				<h2>Maar het tweet niet</h2>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
+				<h2>Samenwerking</h2>
+				<p>Het BRUIS-team bestaat sinds 2005 en richtte zich vooral op creatieve brainstormsessies om ideeeen op te doen, om te 'bubbelen en bruisen'. Een echt team, dat groeide van 3 naar 10 personen, maar slechts een beperkt aantal uren inzetbaar was. We begeleidden 20 a 30 sessies per jaar.</p>
+				<p>Op basis van de wensen van de klant zijn de taken uitgebreid. Bijvoorbeeld met het begeleiden van teambuilding en samenwerking of het faciliteren van strategische bijeenkomsten zoals heisessies,
+via een gespreksleider.</p>
 			</section>
 			<aside>
-				<h2>Twitteren zonder handen</h2>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
+				<h3>BRUIS!</h3>
+				<p>Het afgelopen jaar voerden de teams hun werkzaamheden apart uit, sinds begin dit jaar is er samenwerking in de vorm van 1 kernteam met 18 moderatoren. </p>
 			</aside>
 		</section>
 		<section>
+			<figure>
+					<img src="images/magazine-1/content-img.jpg" alt=""/>
+					<figcaption>
+						Bijeenkomst met een moderator
+					</figcaption>
+				
+			</figure>
 			<section>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<blockquote class="full">
-					<p>De wereld waarin en waarvoor we werken zal altijd dynamisch blijven.</p>
-				</blockquote>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
-				<p>Nam adipiscing hendrerit turpis, et porttitor felis sollicitudin et. Donec dictum massa ac neque accumsan tempor. Cras aliquam, ipsum sit amet laoreet hendrerit, purus sapien convallis dui, et porta leo ipsum ac nunc. Nullam ornare porta dui ac semper. Cras aliquam laoreet hendrerit.</p>
+				<p>Het moderatorenteam bestaat uit een verzameling experts en is ontstaan in de Novem-tijd. We zijn betrokken bij 300 sessies per jaar. Destijds waren we vooral toegerust om het primaire proces te ondersteunen bij het schrijven van goed doortimmerde programma- voorstellen. Om dat scherper te krijgen is een standaard methodiek ontwikkeld: P3N, Programmeren op 3 Niveaus. Gaandeweg kregen we daarnaast ook steeds meer aan- vragen voor de inhoudelijke begeleiding van andere (groeps) processen. Onze moderatoren zijn daarom verder opgeleid op het gebied van brainstormen, kennismanagement en teamsessies. Want het is echt een vak om een sessie goed te begeleiden.</p>
 			</section>
 		</section>
+		<section class="image-slider full">
+			<figure>
+				<ol>
+					<li><img src="images/magazine-1/content-img3.jpg" alt=""/></li>
+					<li><img src="images/magazine-1/content-img.jpg" alt=""/></li>
+					<li><img src="images/magazine-1/content-img2.jpg" alt=""/></li>
+				</ol>
+			</figure>
+		</section>
+		
 	</div>
 </article>

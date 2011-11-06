@@ -82,6 +82,13 @@ var eZine =  {
 				}
 			});
 			
+			$('.article-0 nav a').live('click',function(e){
+				if (eZine.swiper) {
+					eZine.pages.find('a[href="'+$(this).attr('href')+'"]').click();
+					e.preventDefault();
+				}
+			});
+			
 			
 		}
 		
@@ -220,7 +227,8 @@ var eZine =  {
 					document.body.style.backgroundColor = backgroundColor;
 					eZine.renderArticle(index, true);
 					
-
+					
+					
 					eZine.pages.find('>li.current').removeClass('current');
 					eZine.pages.find('>li:eq('+eZine.currentIndex+')').addClass('current');
 
@@ -229,27 +237,12 @@ var eZine =  {
 			},
 			doubleTap: function(e){
 				
-				eZine.menuBar.css({top: $(window).scrollTop()});
-				$('#pages').css({top: ($(window).scrollTop()+window.innerHeight)});
-				
-				$('body').addClass('open-menu');
+				eZine.triggerMenu();
 				
 			    (e)?e.stopPropagation():window.event.cancelBubble = true;
 			},
 			singleTap: function(){
-				eZine.menuBar.css({top: -10000});
-				$('#pages').css({top: -10000});
-				$('body').removeClass('open-menu').removeClass('open-index');
-				
-				// reset the open toc state
-				
-				if (eZine.tocSwiper) {
-					var li = eZine.pages.find('>li:first');
-					var width = eZine.pages.find('>li').css({width: li.data('width')});
-					eZine.pages.width('100%');
-					eZine.tocSwiper.reset();
-					eZine.tocSwiper.lock();
-				}
+				eZine.hideMenu();
 			}
 			
 		});
@@ -273,33 +266,15 @@ var eZine =  {
 		
 		eZine.pages.find('a').click(function(e){
 			
-			if (!$('body').hasClass('open-index')) {
-				eZine.pages.width(eZine.pages.find('li').length*220);
-				
-				
-				
-				if (eZine.tocSwiper) {
-					eZine.tocSwiper.unlock();
-					eZine.tocSwiper.slide(eZine.currentIndex);
-				}
-				
-				$('body').addClass('open-index');
-				e.preventDefault();
-			}
-			else {
+			
 				if (eZine.swiper) eZine.swiper.slide($(this).closest('li').index(),200);
 				if (eZine.tocSwiper) {
 					eZine.tocSwiper.reset();
 					eZine.tocSwiper.lock();
 				}
-				$('body').removeClass('open-index').removeClass('open-menu');
-				var li = eZine.pages.find('>li:first');
-				var width = eZine.pages.find('>li').css({width: li.data('width')});
-				eZine.pages.width('100%');
-				eZine.menuBar.css({top: -10000});
-				$('#pages').css({top: -10000});
+				eZine.hideMenu();
 				e.preventDefault();
-			}
+			
 		});
 		
 		
@@ -313,6 +288,31 @@ var eZine =  {
 		
 		
 		eZine.preloadArticles();
+	},
+	triggerMenu: function(){
+		eZine.menuBar.css({top: $(window).scrollTop()});
+		$('#pages').css({top: ($(window).scrollTop()+window.innerHeight)});
+
+
+		eZine.pages.width(eZine.pages.find('li').length*220);
+		
+		
+		
+		if (eZine.tocSwiper) {
+			eZine.tocSwiper.unlock();
+			eZine.tocSwiper.slide(eZine.currentIndex);
+		}
+		
+		$('body').addClass('open-menu');
+	},
+	hideMenu: function(){
+		eZine.menuBar.css({top: -10000});
+		$('#pages').css({top: -10000});
+		$('body').removeClass('open-menu');
+		
+		// reset the open toc state
+		
+		
 	},
 	preloadArticles: function(){
 		
@@ -348,9 +348,9 @@ var eZine =  {
 	},
 	renderArticle: function(index, slided){
 		
-		
+		$('body').removeClass('home').removeClass('toc');
 		if (index==0) $('body').addClass('home');
-		else $('body').removeClass('home');
+		if (index==1) $('body').addClass('toc');
 		
 		
 		$('#container').css({minHeight: window.innerHeight});
@@ -361,15 +361,24 @@ var eZine =  {
 				if (i==index) {
 					article[0].innerHTML = eZine.articles[i];
 					
-					/*
-					article.find('section.image-slider>figure').each(function(){
+				
+					article.find('.image-slider > figure').each(function(){
 						var _this = this;
 						eZine.imageSwiper = new Swipe(_this, {
 							container: $('>ol', _this)[0],
-							selector: '>li'
+							selector: '>li',
+							doubleTap: function(e){
+								
+								eZine.triggerMenu();
+								
+							    (e)?e.stopPropagation():window.event.cancelBubble = true;
+							},
+							singleTap: function(){
+								eZine.hideMenu();
+							}
 						});
 					});
-					*/
+				
 					
 					if (eZine.swiper) {
 						$('html,body').scrollTop(eZine.swiper.slides[index].scrollPos?eZine.swiper.slides[index].scrollPos:0);

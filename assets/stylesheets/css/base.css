@@ -407,7 +407,7 @@ h6 {
 .toc h2 {
   font-weight: normal;
 }
-blockquote {
+blockquote, q {
   font-family: "RijksoverheidSerif-Italic", Arial, sans-serif;
   font-style: italic;
 }
@@ -565,6 +565,9 @@ li p {
 #document > header nav > ul > li.settings a {
   background-position: -145px 13px;
 }
+#document.home > header > h1 {
+  display: block;
+}
 .article-0 {
   background: transparent no-repeat 50% 0;
 }
@@ -579,7 +582,7 @@ li p {
   margin-bottom: 1.6em;
 }
 .article-0 h1 {
-  font-size: 3.65em;
+  font-size: 3em;
   line-height: 0.9;
 }
 .article-0 dl {
@@ -619,7 +622,6 @@ li p {
   margin-top: 1em;
 }
 article {
-  background: url(img/grid.png) repeat-y 50% 0;
   font-size: 115%;
   line-height: 1.5em;
 }
@@ -672,7 +674,7 @@ article h1 {
 article header h1 {
   line-height: 1;
 }
-article h2, article h3 {
+article h2, article h3, article q {
   font-size: 1.1667em;
   /* 14px */
   line-height: 1.2857em;
@@ -785,7 +787,7 @@ nav.dynamic-toc h2 {
   top: -34px;
   z-index: 3;
   width: 30px;
-  margin-left: -5px;
+  margin-left: -14px px;
   text-align: center;
   color: #4e4e4e;
 }
@@ -1017,7 +1019,7 @@ html.touch #document article.article-0 h1 {
   margin-left: -53px;
   padding-top: 101px;
   padding-left: 53px;
-  background: url(img/rijksoverheid-logo.png) no-repeat -84px 0;
+  background: url(img/rijksoverheid-logo.png) no-repeat 50% 0;
 }
 html.touch #pages {
   -webkit-transition: margin 0.1s ease-in-out;
@@ -1035,7 +1037,7 @@ html.touch #pages {
   z-index: 4;
   left: 0;
   right: 0;
-  min-height: 32px;
+  height: 120px;
   margin: 0;
   background-color: #2d2d2d;
   -webkit-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
@@ -1058,48 +1060,30 @@ html.touch #pages ol.indicator {
 }
 html.touch #pages ol.indicator li {
   float: left;
-}
-html.touch #pages ol.indicator li a {
-  height: 11px;
-  text-indent: -1234em;
-  display: block;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  margin: 10px 5px 11px 0;
-  background: #666666 url(img/nav.png) 50% -130px;
-}
-html.touch #pages ol.indicator li a > * {
-  display: none;
-}
-html.touch #pages ol.indicator li:first-child a {
-  margin-left: 5px;
-}
-html.touch #pages ol.indicator li.current a {
-  background-color: #fff;
-}
-html.touch .open-index #pages {
-  height: 120px;
-}
-html.touch .open-index #pages ol.indicator li {
   width: 210px !important;
 }
-html.touch .open-index #pages ol.indicator li a {
-  margin-right: 10px;
+html.touch #pages ol.indicator li a {
   height: 99px;
+  text-indent: -1234em;
+  display: block;
   position: relative;
   text-indent: -1234em;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: 10px 10px 11px 0;
+  background-image: url(img/nav.png);
+  background-position: 50% -130px;
 }
-html.touch .open-index #pages ol.indicator li a em {
+html.touch #pages ol.indicator li a > em {
   position: absolute;
-  color: #154273;
   left: 10px;
   top: 10px;
   bottom: 10px;
@@ -1109,15 +1093,33 @@ html.touch .open-index #pages ol.indicator li a em {
   display: inline;
   z-index: 4;
 }
-html.touch .open-index #pages ol.indicator li:first-child a {
+html.touch #pages ol.indicator li.home a, html.touch #pages ol.indicator li.toc a {
+  background-color: #fff;
+}
+html.touch #pages ol.indicator li:first-child a {
   margin-left: 10px;
 }
-html.touch .open-index #pages ol.indicator li.home a, html.touch .open-index #pages ol.indicator li.toc a {
-  background-color: #fff;
-}
-html.touch .open-index #pages ol.indicator li.current a {
-  background-color: #fff;
+html.touch #pages ol.indicator li.current a {
   background-position: 50% 100%;
+}
+html.touch .closed-index #pages {
+  height: 32px;
+}
+html.touch .closed-index #pages ol.indicator li a {
+  margin-right: 5px;
+  height: 11px;
+  position: static;
+  text-indent: 0;
+  background-color: #666;
+}
+html.touch .closed-index #pages ol.indicator li a > * {
+  display: none;
+}
+html.touch .closed-index #pages ol.indicator li:first-child a {
+  margin-left: 5px;
+}
+html.touch .closed-index #pages ol.indicator li.current a {
+  background-color: #fff;
 }
 html.touch .open-menu #document > header {
   top: -10000px;
@@ -1126,15 +1128,21 @@ html.touch .open-menu #document > header > nav {
   top: 0;
 }
 html.touch .open-menu #pages {
-  margin-top: -32px;
-}
-html.touch .open-index #pages {
   margin-top: -120px;
 }
+html.touch .open-index #pages {
+  margin-top: -32px;
+}
 html.touch .home #document > header {
+  display: none;
+}
+html.touch .toc #document article > div {
+  padding-top: 44px;
+}
+html.touch .toc #document > header {
   top: 0 !important;
 }
-html.touch .home #document > header > nav {
+html.touch .toc #document > header > nav {
   top: 0;
   -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
@@ -1143,4 +1151,22 @@ html.touch .home #document > header > nav {
   -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
   background-color: transparent;
+}
+html.touch .toc #document > header > nav ul > li.home a {
+  background-position: 15px 13px;
+}
+html.touch .toc #document > header > nav ul > li.toc a {
+  background-position: -29px 13px;
+}
+html.touch .toc #document > header > nav ul > li.export a {
+  background-position: -101px 13px;
+}
+html.touch .toc #document > header > nav ul > li.settings a {
+  background-position: -145px 13px;
+}
+html.touch .image-slider ol {
+  width: 20000px;
+}
+html.touch .image-slider ol li {
+  float: left;
 }

@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 .toc h2 {
 	font-weight: normal;
 }
-blockquote {
+blockquote, q {
 	font-family: "RijksoverheidSerif-Italic", Arial, sans-serif;
 	font-style: italic;
 }
@@ -259,7 +259,12 @@ li p { margin-bottom: 0; }
 			}
 		}
 	}
+	
+	&.home > header > h1 {
+		display: block;
+	}
 }
+
 
 .article-0 {
 		background: transparent no-repeat 50% 0;
@@ -279,7 +284,7 @@ li p { margin-bottom: 0; }
 			margin-bottom: 1.6em;
 		}
 		h1 {
-			font-size: 3.65em;
+			font-size: 3em;
 			line-height: 0.9;
 		}
 
@@ -330,7 +335,7 @@ article {
 		margin: 24px;
 		.clearfix();
 	}
-	background: url(img/grid.png) repeat-y 50% 0;
+	
 	font-size: 115%;
 	line-height: 1.5em;
 
@@ -358,7 +363,7 @@ article {
 	header h1 {
 		line-height: 1;
 	}
-	h2, h3 {
+	h2, h3, q {
 		font-size: 1.1667em; /* 14px */ 
 		line-height: 1.2857em; /* 18px */ 
 		margin-top: 1.2857em; 
@@ -456,7 +461,8 @@ article {
 		top: -34px;
 		z-index: 3;
 		width: 30px;
-		margin-left: -5px;
+		margin-left: -14px
+		px;
 		text-align: center;
 		color: #4e4e4e;
 		a {	
@@ -663,7 +669,7 @@ article {
 						margin-left: -53px;
 						padding-top: 101px;
 						padding-left: 53px;
-						background: url(img/rijksoverheid-logo.png) no-repeat -84px 0;
+						background: url(img/rijksoverheid-logo.png) no-repeat 50% 0;
 						
 					}
 					
@@ -677,13 +683,14 @@ article {
 		
 		
 		#pages {
+		
 		.transition(margin, 0.1s);
 		position: absolute;
 		top: -10000px;	
 		z-index: 4;
 		left: 0;
 		right: 0;
-		min-height: 32px;
+		height: 120px;
 		margin: 0;
 		background-color: #2d2d2d;
 		.box-shadow(0,0,6px);
@@ -701,45 +708,21 @@ article {
 			li {
 					
 				float: left;
-					
+				width: 210px !important;
 				a {
-					height: 11px;
+					height: 99px;
 					text-indent: -1234em;
 					display: block;
-					
+					position: relative;
+					text-indent: -1234em;
 					.transition(all, 0.3s);
-					margin: 10px 5px 11px 0;
-					background: #666 url(img/nav.png) 50% -130px;
-					> * {
-						display: none;
+					margin: 10px 10px 11px 0;
+					background-image: url(img/nav.png);
+					background-position: 50% -130px;
+					> em {
 						
-					}
-				}
-				&:first-child  {
-					a {
-						margin-left: 5px;
-					}
-				}
-				&.current a {
-					background-color: #fff;
-				}
-			}
-		}
-	}	
-	.open-index #pages {
-			height: 120px;
-			
-			ol.indicator {
-				li {
-					width: 210px !important;
-					a {
-						margin-right: 10px;
-						height: 99px;
-						position: relative;
-						text-indent: -1234em;
-						em {
 							position: absolute;
-							color: #154273;
+							
 							left: 10px;
 							top: 10px;
 							bottom: 10px;
@@ -748,24 +731,47 @@ article {
 							font-style: normal;
 							display: inline;
 							z-index: 4;
-						}
 					}
+				}
+				&.home a, &.toc a {
+					background-color: #fff;
+				}
 				&:first-child  {
 					a {
 						margin-left: 10px;
 					}
 				}
-				&.home, &.toc {
+				&.current a {
+					background-position: 50% 100%;
+					
+				}
+			}
+		}
+	}	
+	.closed-index #pages {
+			height: 32px;
+			
+			ol.indicator {
+				li {
+					
 					a {
-						background-color: #fff;
-						 
-						
-						
+						margin-right: 5px;
+						height: 11px;
+						position: static;
+						text-indent: 0;
+						background-color: #666; 
+						> * {
+							display: none;
+						}
+					}
+				&:first-child  {
+					a {
+						margin-left: 5px;
 					}
 				}
 				&.current a {
+					
 					background-color: #fff;
-					background-position: 50% 100%;
 				}
 			}
 		}
@@ -782,13 +788,13 @@ article {
 				
 			}
 			#pages {
-				margin-top: -32px;
+				margin-top: -120px;
 			}
 		}
 		.open-index {
 			
 				#pages {
-					margin-top: -120px;
+					margin-top: -32px;
 			
 				
 				}
@@ -798,17 +804,46 @@ article {
 		.home {
 			#document {
 				> header {
-					top: 0 !important;
-					 > nav {
-						top: 0;
-						.box-shadow(0,0,0);
-						background-color: transparent;
-					}
+					display: none;
+					 
 				}
 			}
 		}
 		
+		.toc {
+			#document {
+				article {
+					> div {
+						padding-top: 44px;
+					}
+				}
+				> header {
+					 top: 0 !important;
+                     > nav {
+                        top: 0;
+                        .box-shadow(0,0,0);
+                        background-color: transparent;
+                        ul > li {
+	                        &.home { a { background-position: 15px 13px;} }
+							&.toc { a { background-position: -29px 13px;} }
+							&.export { a { background-position: -101px 13px;} }
+							&.settings { a { background-position: -145px 13px;} }
+                        }
+                    }
+				} 
+			}
+		}
 		
+		.image-slider {
+			ol {
+				width: 20000px;
+				li {
+					
+					float: left;
+					
+				}
+			}
+		}
 		
 	}
 

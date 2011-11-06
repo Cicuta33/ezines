@@ -318,7 +318,7 @@ Swipe.prototype = {
       var lastTouch = target.lastTouch || now+1;
       var delta = now - lastTouch;
       clearTimeout(target.actionTimeout);
-      if(delta<500 && delta>0) {
+      if(delta<500 && delta>0 && !this.isScrolling) {
    	   //toubletab
    	   target.lastTouch = null;
    	   

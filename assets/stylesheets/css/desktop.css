@@ -203,6 +203,9 @@ section.toc ol li a {
   #document article {
     display: block;
   }
+  html.touch #document article.article-0 h1 {
+    background-position: -84px 0;
+  }
   nav.prev-next {
     display: none;
   }
@@ -218,8 +221,30 @@ section.toc ol li a {
     -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
   }
-  #document article {
-    background-position: 44px 0;
+  #document article > div {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #document article > div header.full {
+    padding-left: 284px;
+    margin-left: -44px;
+    margin-right: -44px;
+  }
+  #document article.layout-2 > div {
+    margin-left: 420px;
+    padding-right: 44px;
+  }
+  #document article.layout-2 > div aside {
+    left: -236px;
+  }
+  #document article.layout-3 > div {
+    padding-left: 44px;
+    padding-right: 44px;
+    margin-right: 420px;
+  }
+  #document article.layout-3 > div header figure.full {
+    margin: -24px -44px 0 -44px;
+    width: 1024px;
   }
 }
 /* END @media */
@@ -227,7 +252,13 @@ section.toc ol li a {
 	Style adjustments for tablet (iPad) in portrait view mode (768px)
 	======================================================================================= */
 @media only screen and (device-width: 768px) and (orientation: portrait) {
-  
+  article.toc section.toc ol li {
+    float: left;
+    width: 33%;
+  }
+  article.toc section.toc ol li a {
+    min-height: 190px;
+  }
 }
 /* END @media */
 /*	==========================================================================================

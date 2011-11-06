@@ -236,12 +236,31 @@
 		
 		article {
 			display: block;
+			
 		}
 		
 		
 		
 		
 		
+		
+		
+	}
+	html.touch {
+		#document {
+			article {
+					&.article-0 {
+						
+						h1 {
+							
+							background-position: -84px 0;
+							
+						}
+						
+					}
+					
+				}
+			}
 	}
 	
 	
@@ -274,8 +293,39 @@
 	#document {
 		.box-shadow(0,0,0);
 		article {
-			background-position: 44px 0;
-
+			
+			> div {
+			 	// temp grid ipad fix
+				padding-left: 20px;
+				padding-right: 20px;
+				
+				header.full {
+					padding-left: 284px;
+					margin-left: -44px;
+					margin-right: -44px;
+				}
+			}
+			&.layout-2 {
+				> div {
+					margin-left: 420px;
+					padding-right: 44px;
+					aside {
+						left: -236px;
+					}
+				}
+			}
+			&.layout-3 {
+				> div {
+					padding-left: 44px;
+					padding-right: 44px;
+					margin-right: 420px;
+					header figure.full {
+						margin: -24px -44px 0 -44px;
+						width: 1024px;
+					}
+				}
+			}
+			
 		}
 		
 	}
@@ -291,6 +341,25 @@
 	======================================================================================= */
 @media only screen and (device-width: 768px) and (orientation: portrait) {
 
+	article.toc {
+				section.toc {
+		
+					ol {
+		
+						li {
+		
+							float: left;
+							width: 33%;
+				
+							a {
+								min-height: 190px;
+					
+						
+							}
+						}
+					}
+				}
+			}
 	
 
 }	/* END @media */

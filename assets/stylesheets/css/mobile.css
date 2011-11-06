@@ -63,7 +63,25 @@
 	Style adjustments for mobile (iPhone) in portrait and landscape view
 	======================================================================================= */
 @media all and (orientation: portrait), (orientation: landscape) {
-  
+  .touch #document article.article-0 > div {
+    padding: 0;
+  }
+  .touch #document article.article-0 > div h1 {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  #document article header.image.full {
+    min-height: 300px;
+  }
+  #document article header.image.full h1 {
+    margin-top: 30%;
+    width: auto;
+    margin: 0;
+  }
+  #document article.layout-1 header.image {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
 }
 /* END @media */
 /*	==========================================================================================

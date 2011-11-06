@@ -3,7 +3,7 @@
 	<div>
 		<div>
 			<header>
-				<h1>0-Personeelsblad Agentschap NL</h1>
+				<h1>Personeelsblad Agentschap NL</h1>
 				
 				<dl>
 					<dt class="volume">Jaargang</dt><dd>2</dd>
@@ -14,27 +14,23 @@
 			<nav class="toc">
 				<ul>
 					<li>
-						<a href="artikel-2">
-							<h2>AgNL onderdeel vanDG Uitvoering</h2>
-							<p>Organisatie zal komende periode verder worden ingericht</p>
-						</a>
-					</li>
-					<li>
-						<a href="artikel-3">
-							<h2>Successvolle ondernemerscampagne</h2>
+						<a href="artikel-1">
+							<h2>Moderatoren gaan samen bruisen</h2>
+							<p>Creatief, meedenkend, scherpe vragen, goed timemanagement</p>
 						</a>
 					</li>
 					<li>
 						<a href="artikel-4">
-							<h2>Moderatoren gaan samen bruisen</h2>
+							<h2>Successvolle ondernemers&shy;campagne</h2>
 							<p>Het bruis-team van de EVD en de moderatoren van SenterNovem</p>
 						</a>
 					</li>
 					<li>
-						<a href="artikel-1">
-							<h2>AgNL ontkrokodilliseert</h2>
+						<a href="artikel-2">
+							<h2>Twitteren voor je werk</h2>
+
 						</a>
-					</li> 
+					</li>
 				</ul>
 			</nav>
 		</div>

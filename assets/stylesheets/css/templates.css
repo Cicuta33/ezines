@@ -1,28 +1,73 @@
-.toc, .open-index #pages .indicator {
+.toc, body #pages .indicator {
   /* blauw */
 
-  /* rood */
+  /* paars */
 
   /* groen */
 
-  /* paars */
+  /* groen */
 
   /* lichtpaars */
 
 }
-.toc .color-1 a, .open-index #pages .indicator .color-1 a {
-  background-color: #d9ebf7;
+.toc .color-1 a,
+body #pages .indicator .color-1 a,
+.toc .color-1.current a,
+body #pages .indicator .color-1.current a {
+  background-color: #007bc7;
 }
-.toc .color-2 a, .open-index #pages .indicator .color-2 a {
-  background-color: #f9dfdd;
+.toc .color-1 h2,
+body #pages .indicator .color-1 h2,
+.toc .color-1 a,
+body #pages .indicator .color-1 a {
+  color: #fff;
 }
-.toc .color-3 a, .open-index #pages .indicator .color-3 a {
-  background-color: #e1eddb;
+.toc .color-1 p, body #pages .indicator .color-1 p {
+  color: #fff;
 }
-.toc .color-4 a, .open-index #pages .indicator .color-4 a {
-  background-color: #e3dce7;
+.toc .color-2 a,
+body #pages .indicator .color-2 a,
+.toc .color-2.current a,
+body #pages .indicator .color-2.current a {
+  background-color: #42145f;
 }
-.toc .color-5 a, .open-index #pages .indicator .color-5 a {
+.toc .color-2 h2,
+body #pages .indicator .color-2 h2,
+.toc .color-2 a,
+body #pages .indicator .color-2 a {
+  color: #fff;
+}
+.toc .color-2 p, body #pages .indicator .color-2 p {
+  color: #fff;
+}
+.toc .color-3 a,
+body #pages .indicator .color-3 a,
+.toc .color-3.current a,
+body #pages .indicator .color-3.current a {
+  background-color: #777c00;
+}
+.toc .color-3 h2,
+body #pages .indicator .color-3 h2,
+.toc .color-3 a,
+body #pages .indicator .color-3 a {
+  color: #fff;
+}
+.toc .color-3 p, body #pages .indicator .color-3 p {
+  color: #fff;
+}
+.toc .color-4 a,
+body #pages .indicator .color-4 a,
+.toc .color-4.current a,
+body #pages .indicator .color-4.current a {
+  background-color: #E1EDDB;
+}
+.toc .color-4 h2,
+body #pages .indicator .color-4 h2,
+.toc .color-4 a,
+body #pages .indicator .color-4 a {
+  color: #39870C;
+}
+.toc .color-5 a, body #pages .indicator .color-5 a {
   background-color: #f7d9e7;
 }
 article.article-0 {
@@ -98,11 +143,11 @@ article section aside {
 article section aside.left {
   float: left;
 }
-article section section + aside, article section aside.left + aside {
+article section section + aside, article section aside.left + aside, article section figure + aside {
   float: right;
   clear: right;
 }
-article section aside + section {
+article section aside + section, article section aside + figure {
   margin-left: 24px;
 }
 article figure, article .image-slider {
@@ -112,10 +157,22 @@ article figure, article .image-slider {
   width: 456px;
   margin-bottom: 1.5em;
 }
+article figure ol, article .image-slider ol {
+  margin: 0;
+  padding: 0;
+}
 article figure.full, article .image-slider.full {
   float: none;
   width: auto;
   margin-left: 0;
+}
+article figure.full figure, article .image-slider.full figure {
+  width: 100%;
+  margin: 0;
+}
+article figure.full figure img, article .image-slider.full figure img {
+  max-width: none;
+  width: 100%;
 }
 article figure.left,
 article .image-slider.left,
@@ -137,11 +194,11 @@ article .image-slider figure ol {
 }
 article .image-slider figure ol li {
   float: left;
-  padding-right: 24px;
 }
 article .image-slider figure ol li img {
   float: left;
   max-width: 536px;
+  margin-bottom: 1.5em;
 }
 article section section figure {
   margin: 0 0 1.5em 0;
@@ -166,7 +223,7 @@ article.layout-1 header.full {
 article.layout-1 header.full h1 {
   display: block;
   width: auto;
-  margin-top: 40%;
+  margin-top: 50%;
 }
 article.layout-1 header.full h1 + h2 {
   margin-top: 2em;
@@ -179,12 +236,17 @@ article.layout-1 header.image {
   overflow: hidden;
   margin-left: 0;
   margin-right: 0;
-  padding-left: 284px;
-  padding-right: 284px;
+  padding-left: 264px;
+  padding-right: 264px;
   background-size: cover;
 }
+article.layout-1 header.image.full {
+  margin-left: -24px;
+  margin-right: -24px;
+  min-height: 656px;
+}
 article.layout-1 header.image:first-child {
-  margin-top: -44px;
+  margin-top: -24px;
 }
 article.layout-1 section h1 {
   margin-left: 240px;
@@ -231,83 +293,112 @@ article.layout-1 section section figure.right {
   margin: 0 -240px 1.5em 24px;
   float: right;
 }
-article.layout-2 {
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
+article.layout-2 > div {
+  margin: 0 0 0 400px;
+  background-color: #fff;
+  padding: 24px;
 }
-article.layout-2 > header {
-  margin-bottom: 0;
-  padding-bottom: 1em;
-}
-article.layout-2 > section > section, article.layout-2 > header, article.layout-2 > footer {
-  border-left: 320px solid transparent;
-  padding-left: 24px;
-  min-height: 0;
-  zoom: 1;
-}
-article.layout-2 > section > section:before,
-article.layout-2 > header:before,
-article.layout-2 > footer:before,
-article.layout-2 > section > section:after,
-article.layout-2 > header:after,
-article.layout-2 > footer:after {
-  display: table;
-  content: "";
-}
-article.layout-2 > section > section:after, article.layout-2 > header:after, article.layout-2 > footer:after {
-  clear: both;
-}
-article.layout-2 > section aside {
-  margin-left: 104px;
-  width: 216px;
-  position: relative;
-  z-index: 2;
-}
-article.layout-2 > section section + aside {
-  margin-left: 24px;
-}
-article.layout-2 > section aside + section {
+article.layout-2 figure, article.layout-2 image-slider {
+  width: 100%;
   margin-left: 0;
 }
+article.layout-2 aside {
+  width: 264px;
+  left: -240px;
+  position: absolute;
+  top: 0;
+  width: 216px;
+}
+article.layout-2 aside figcaption {
+  width: auto;
+  margin-right: 24px;
+}
+article.layout-3 > div {
+  margin: 0 400px 0 0;
+  padding: 24px;
+}
+article.layout-3 header figure.full {
+  margin: -24px -24px 0 -24px;
+  width: 984px;
+}
+article.layout-3 figure, article.layout-3 image-slider {
+  width: 100%;
+  margin-left: 0;
+}
+article.layout-3 figure.full, article.layout-3 image-slider.full {
+  width: 936px;
+}
+article.layout-3 aside {
+  width: 264px;
+  right: -240px;
+  position: absolute;
+  top: 0;
+  width: 216px;
+}
+article.layout-3 aside figcaption {
+  width: auto;
+  margin-right: 24px;
+}
 article.color-1 {
-  background-color: #d9ebf7;
+  background-color: #fff;
 }
 article.color-2 {
-  background-color: #f9dfdd;
+  background-color: #42145f;
 }
 article.color-3 {
-  background-color: #e1eddb;
+  background-color: #777c00;
 }
 article.color-4 {
-  background-color: #e3dce7;
+  background-color: #e1eddb;
 }
 article.color-5 {
   background-color: #f7d9e7;
 }
-article.color-1 h1, article.color-1 h2, article.color-1 h3 {
+article.color-1 {
   color: #007bc7;
+}
+article.color-1 h1, article.color-1 h2, article.color-1 h3 {
+  color: #ca005d;
 }
 article.color-1 a, article.color-1 blockquote, article.color-1 p.intro {
   color: #ca005d;
 }
+article.color-1 header.image * {
+  color: #fff;
+}
+article.color-2 {
+  color: #fff;
+}
+article.color-2 figcaption {
+  color: #fff;
+}
 article.color-2 h1, article.color-2 h2, article.color-2 h3 {
-  color: #d52b1e;
+  color: #b2d7ee;
 }
 article.color-2 a, article.color-2 blockquote, article.color-2 p.intro {
-  color: #42145f;
+  color: #b2d7ee;
 }
 article.color-3 h1, article.color-3 h2, article.color-3 h3 {
-  color: #39870c;
+  color: #a90061;
 }
 article.color-3 a, article.color-3 blockquote, article.color-3 p.intro {
-  color: #007bc7;
+  color: #777c00;
 }
-article.color-4 h1, article.color-4 h2, article.color-4 h3 {
-  color: #42145f;
+article.color-3 aside {
+  color: #fff;
+}
+article.color-3 aside h2, article.color-3 aside h3, article.color-3 aside q {
+  color: #fff;
+}
+article.color-4 h1,
+article.color-4 h2,
+article.color-4 h3,
+article.color-4 blockquote,
+article.color-4 q {
+  color: #39870c;
 }
 article.color-4 a, article.color-4 blockquote, article.color-4 p.intro {
-  color: #db2b1e;
+  color: #007bc7;
 }
 article.color-5 h1, article.color-5 h2, article.color-5 h3 {
   color: #ca005d;
@@ -372,6 +463,36 @@ article.color-5 a, article.color-5 blockquote, article.color-5 p.intro {
     width: auto;
     float: none;
     margin: 0 auto 1.5em auto;
+  }
+  #document article.layout-2 {
+    background-color: #fff;
+  }
+  #document article.layout-2 > div {
+    margin-left: 0px;
+  }
+  #document article.layout-2 > div aside {
+    float: none;
+    position: static;
+    color: #4d4d4d;
+    width: auto;
+  }
+  #document article.layout-2 > div aside h2, #document article.layout-2 > div aside h3, #document article.layout-2 > div aside q {
+    color: #4d4d4d;
+  }
+  #document article.layout-3 > div {
+    margin-right: 0;
+  }
+  #document article.layout-3 > div aside {
+    float: none;
+    position: static;
+    color: #4d4d4d;
+    width: auto;
+  }
+  #document article.layout-3 > div aside h2, #document article.layout-3 > div aside h3, #document article.layout-3 > div aside q {
+    color: #4d4d4d;
+  }
+  #document article.layout-3 > div figure.full {
+    width: auto;
   }
 }
 /* END @media */
